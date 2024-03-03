@@ -89,10 +89,10 @@ class _LoginState extends State<Login> {
                           alignment: Alignment.center,
                           child: Text(
                             "WELCOME TO",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.montserrat(
                                 fontSize: media.width * twenty,
-                                fontWeight: FontWeight.normal,
-                                color: textColor),
+                                fontWeight: FontWeight.w500,
+                                color: textColor.withOpacity(.5)),
 
                           ),
                         ),
@@ -106,31 +106,32 @@ class _LoginState extends State<Login> {
                                   fit: BoxFit.contain)),
                         ),
                         Container(
+                          padding: EdgeInsets.all(media.width * 0.01),
                           alignment: Alignment.center,
                             child: Text(
                               "Book Rides Like a Pro",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.montserrat(
                                   fontSize: media.width * twenty,
                                   fontWeight: FontWeight.normal,
-                                  color: textColor),
+                                  color: textColor.withOpacity(.5),),
 
                             ),
                         ),
                         SizedBox(
 
-                          height: 30,
+                          height: 24,
                         ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Enter Your Phone Number:",
-                            style: GoogleFonts.poppins(
-                                fontSize: media.width * sixteen,
-                                fontWeight: FontWeight.normal,
-                                color: textColor),
-
-                          ),
-                        ),
+                        // Container(
+                        //   alignment: Alignment.centerLeft,
+                        //   child: Text(
+                        //     "Enter Your Phone Number:",
+                        //     style: GoogleFonts.montserrat(
+                        //         fontSize: media.width * sixteen,
+                        //         fontWeight: FontWeight.normal,
+                        //         color: textColor),
+                        //
+                        //   ),
+                        // ),
                         SizedBox(
 
                           height: 8,
@@ -328,11 +329,12 @@ class _LoginState extends State<Login> {
 
                                 //input field
                                 child: Container(
+                                  width: 64,
                                   decoration: BoxDecoration(
                                       border: Border.all(
-
+                                        color: Colors.white24
                                       ),
-                                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                                      borderRadius: BorderRadius.all(Radius.circular(30),),
                                   ),
 
                                   height: 50,
@@ -348,19 +350,22 @@ class _LoginState extends State<Login> {
                                         width: media.width * 0.02,
                                       ),
 
-                                      Text(
-                                          style: TextStyle(
-                                            background: Paint()
-                                              ..color = Colors.black26
-                                              ..strokeWidth = 0
-                                              ..strokeJoin = StrokeJoin.round
-                                              ..strokeCap = StrokeCap.round
-                                              ..style = PaintingStyle.stroke,
-                                            color: Colors.white,
-                                          ),
-                                        "IN "+countries[phcode]['dial_code']
-                                            .toString(),
+                                      Center(
+                                        child: Text(
+                                            style: GoogleFonts.montserrat(
+                                              background: Paint()
+                                                ..color = Colors.black26
+                                                ..strokeWidth = 0
+                                                ..strokeJoin = StrokeJoin.round
+                                                ..strokeCap = StrokeCap.round
+                                                ..style = PaintingStyle.stroke,
+                                              color: Colors.white,
+                                            ),
+                                          "IN "+countries[phcode]['dial_code']
+                                              .toString(),
 
+
+                                        ),
                                       ),
                                       const SizedBox(
                                         width: 5,
@@ -374,9 +379,10 @@ class _LoginState extends State<Login> {
 
                               const SizedBox(width: 10),
                               Container(
-                                height: 50,
+
+                                height: 56,
                                 alignment: Alignment.center,
-                                width: media.width * 0.64,
+                               width: media.width * 0.64,
 
                                 child: TextFormField(
                                   controller: controller,
@@ -396,23 +402,31 @@ class _LoginState extends State<Login> {
                                   },
                                   maxLength: countries[phcode]
                                       ['dial_max_length'],
-                                  style: GoogleFonts.roboto(
+                                  style: GoogleFonts.montserrat(
                                       fontSize: media.width * sixteen,
                                       color: Colors.white,
                                       letterSpacing: 1),
                                   keyboardType: TextInputType.number,
                                   decoration: InputDecoration(
-                                    hintText: "X X X X X X X X X X",
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(color: Colors.white),  // Customize the border color as needed
+                                     borderRadius: BorderRadius.circular(30.0),
+                                    ),
+                                     hintText: 'Enter Your Phone Number',
                                     alignLabelWithHint: true,
-                                    focusColor: Colors.white,
-
+                                    fillColor: Colors.black.withOpacity(.8),
+                                    //focusColor: Colors.white,
+                                    hintStyle: GoogleFonts.montserrat(
+                                        fontSize: media.width * fourteen,
+                                        color: Colors.white24,
+                                        letterSpacing: 1),
                                     counterText: '',
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(30.0),
                                     ),
                                     filled: true,
-                                    hintStyle: TextStyle(color: Colors.white54),
-                                    fillColor: Colors.black26,
+
+
                                   ),
                                 ),
                               )
@@ -538,11 +552,11 @@ class _LoginState extends State<Login> {
                           ],
                         ),*/
                         SizedBox(
-                          height: media.height * 0.1,
+                          height: media.height * 0.04,
                         ),
                         SizedBox(
                           width: 400, // <-- Your width
-                          height: 48, // <-
+                          height: 56, // <-
 
 
                                 child:  ElevatedButton(
@@ -580,9 +594,11 @@ class _LoginState extends State<Login> {
                                       _isLoading = false;
                                     });
                                   },
-                                  child: Text("SEND OTP",style: TextStyle(
-                                    fontSize: 16,color: Colors.white70
-                                  ),),
+                                  child: Text("SEND OTP",style: GoogleFonts.montserrat(
+                                      fontSize: media.width * sixteen,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1),),
                                 ),
                               )
 

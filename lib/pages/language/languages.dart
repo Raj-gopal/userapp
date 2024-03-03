@@ -64,7 +64,7 @@ class _LanguagesState extends State<Languages> {
                               ? 'Choose Language'
                               : languages['en']
                                   ['text_choose_language'],
-                          style: GoogleFonts.roboto(
+                          style: GoogleFonts.montserrat(
                               color: textColor,
                               fontSize: media.width * sixteen,
                               fontWeight: FontWeight.bold),
@@ -119,7 +119,7 @@ class _LanguagesState extends State<Languages> {
                                             .firstWhere(
                                                 (e) => e['code'] == i)['name']
                                             .toString(),
-                                        style: GoogleFonts.roboto(
+                                        style: GoogleFonts.montserrat(
                                             fontSize: media.width * sixteen,
                                             color: textColor),
                                       ),
@@ -159,20 +159,28 @@ class _LanguagesState extends State<Languages> {
                 const SizedBox(height: 20),
                 //button
                 (choosenLanguage != '')
-                    ? Button(
-                        onTap: () async {
-                          setState(() {
-                            _isLoading = true;
-                          });
-                          pref.setString(
-                              'languageDirection', languageDirection);
-                          pref.setString('choosenLanguage', choosenLanguage);
-                          setState(() {
-                            _isLoading = false;
-                          });
-                          navigate();
-                        },
-                        text: languages['en']['text_confirm'])
+                    ? Container(
+                  height: 40,
+                   decoration: BoxDecoration(
+
+                     color: Colors.white24,
+                     borderRadius: BorderRadius.circular(16),
+                   ),
+                      child: Button(
+                          onTap: () async {
+                            setState(() {
+                              _isLoading = true;
+                            });
+                            pref.setString(
+                                'languageDirection', languageDirection);
+                            pref.setString('choosenLanguage', choosenLanguage);
+                            setState(() {
+                              _isLoading = false;
+                            });
+                            navigate();
+                          },
+                          text: languages['en']['text_confirm'],),
+                    )
                     : Container(),
               ],
             ),

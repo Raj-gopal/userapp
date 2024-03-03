@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+// Screen height and width variables
 var scrheight = 813.0;
 var scrwidth = 375.0;
 
+// Font size variables
 double eight = 0.0213;
 double ten = 0.0267;
 double twelve = 0.032;
@@ -16,6 +18,8 @@ double twentysix = 0.0693;
 double twentyeight = 0.07466;
 double twentyfour = 0.064;
 double fourty = 0.10667;
+
+// Color variables
 Color backgroundColor = const Color(0xff000000);
 Color textColor = const Color(0xfff8f8f8);
 Color backIcon = const Color(0xffffffff);
@@ -40,5 +44,6 @@ Color online = const Color(0xff309700);
 Color onlineOfflineText = const Color(0xffFFFFFF);
 Color borderLines = const Color(0xffE5E5E5);
 Color starColor = const Color(0xffFac500);
-bool isDarkTheme = false;
 
+// Theme variable
+bool isDarkTheme = false;

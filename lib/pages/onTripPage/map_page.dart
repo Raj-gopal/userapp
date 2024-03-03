@@ -860,7 +860,7 @@ class _MapsState extends State<Maps>
                                                             : Image.asset(
                                                                 'assets/images/dropmarker.png'))),
 
-                                               /* Positioned(
+                                                Positioned(
                                                   right: 10,
                                                   top: 150,
                                                   child: InkWell(
@@ -910,8 +910,8 @@ class _MapsState extends State<Maps>
                                                     ),
                                                   ),
                                                 ),
-                                                (contactus == true)*/
-                                                    /*? Positioned(
+                                                (contactus == true)
+                                                    ? Positioned(
                                                         right: 10,
                                                         top: 190,
                                                         child: InkWell(
@@ -1029,7 +1029,7 @@ class _MapsState extends State<Maps>
                                                               )),
                                                         ),
                                                       )
-                                                    : Container(),*/
+                                                    : Container(),
                                                 (_bottom == 0)
                                                     ? Positioned(
                                                         top: MediaQuery.of(
@@ -1895,13 +1895,13 @@ class _MapsState extends State<Maps>
                                                                                     child: Row(
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
                                                                                       children: [
-                                                                                        /*SizedBox(
+                                                                                        SizedBox(
                                                                                           width: media.width * 0.05,
                                                                                           child: Image.asset(
                                                                                             (_dropaddress == true) ? 'assets/images/dropmarker.png' : 'assets/images/pickupmarker.png',
                                                                                             fit: BoxFit.contain,
                                                                                           ),
-                                                                                        ),*/
+                                                                                        ),
                                                                                         SizedBox(
                                                                                           width: media.width * 0.025,
                                                                                         ),

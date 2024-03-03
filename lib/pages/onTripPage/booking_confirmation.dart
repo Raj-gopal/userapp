@@ -1152,80 +1152,80 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                     ),
                                   )
                                       : Container(),
-                                  Positioned(
-
-                                    top: media.width *
-                                        0.16,
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        height: 188,
-                                        width: media.width*.9,
-
-                                        decoration: BoxDecoration(
-                                          color:Colors.black,
-                                          borderRadius: BorderRadius.circular(15),
-                                        ),
-                                        child:Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(width:8),
-                                              Padding(
-                                                padding: const EdgeInsets.all(4.0),
-                                                child: Text('From:',style:TextStyle(color: Colors.white)),
-                                              ),
-
-                                              SizedBox(
-                                                //width:296,
-                                                height: 56,
-                                                child: TextField(
-                                                  decoration: InputDecoration(
-                                                    prefixIcon: Icon(Icons.search),
-                                                    fillColor: Colors.black.withOpacity(.8),
-                                                    border: OutlineInputBorder(
-                                                      borderRadius: BorderRadius.circular(24),
-                                                    ),
-                                                    // labelText: 'Filled',
-                                                    hintText: 'Pickup Location..',
-                                                    hintStyle: TextStyle(
-                                                        color: Colors.white70
-                                                    ),
-                                                    filled: true,
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(width:8),
-                                              Padding(
-                                                padding: const EdgeInsets.all(4.0),
-                                                child: Text('To:',style:TextStyle(color: Colors.white)),
-                                              ),
-                                              SizedBox(
-                                                //width:296,
-                                                height: 56,
-                                                child: TextField(
-                                                  decoration: InputDecoration(
-                                                    prefixIcon: Icon(Icons.search),
-                                                    fillColor: Colors.black.withOpacity(.8),
-                                                    border: OutlineInputBorder(
-                                                      borderRadius: BorderRadius.circular(24),
-                                                    ),
-                                                    // labelText: 'Filled',
-                                                    hintText: 'Drop Location..',
-                                                    hintStyle: TextStyle(
-                                                        color: Colors.white70
-                                                    ),
-                                                    filled: true,
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(width:8),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),),
+                                  // Positioned(
+                                  //
+                                  //   top: media.width *
+                                  //       0.16,
+                                  //   child: Padding(
+                                  //     padding: const EdgeInsets.all(8.0),
+                                  //     child: Container(
+                                  //       height: 188,
+                                  //       width: media.width*.9,
+                                  //
+                                  //       decoration: BoxDecoration(
+                                  //         color:Colors.black,
+                                  //         borderRadius: BorderRadius.circular(15),
+                                  //       ),
+                                  //       child:Padding(
+                                  //         padding: const EdgeInsets.all(8.0),
+                                  //         child: Column(
+                                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                                  //           children: [
+                                  //             SizedBox(width:8),
+                                  //             Padding(
+                                  //               padding: const EdgeInsets.all(4.0),
+                                  //               child: Text('From:',style:TextStyle(color: Colors.white)),
+                                  //             ),
+                                  //
+                                  //             SizedBox(
+                                  //               //width:296,
+                                  //               height: 56,
+                                  //               child: TextField(
+                                  //                 decoration: InputDecoration(
+                                  //                   prefixIcon: Icon(Icons.search),
+                                  //                   fillColor: Colors.black.withOpacity(.8),
+                                  //                   border: OutlineInputBorder(
+                                  //                     borderRadius: BorderRadius.circular(24),
+                                  //                   ),
+                                  //                   // labelText: 'Filled',
+                                  //                   hintText: 'Pickup Location..',
+                                  //                   hintStyle: TextStyle(
+                                  //                       color: Colors.white70
+                                  //                   ),
+                                  //                   filled: true,
+                                  //                 ),
+                                  //               ),
+                                  //             ),
+                                  //             SizedBox(width:8),
+                                  //             Padding(
+                                  //               padding: const EdgeInsets.all(4.0),
+                                  //               child: Text('To:',style:TextStyle(color: Colors.white)),
+                                  //             ),
+                                  //             SizedBox(
+                                  //               //width:296,
+                                  //               height: 56,
+                                  //               child: TextField(
+                                  //                 decoration: InputDecoration(
+                                  //                   prefixIcon: Icon(Icons.search),
+                                  //                   fillColor: Colors.black.withOpacity(.8),
+                                  //                   border: OutlineInputBorder(
+                                  //                     borderRadius: BorderRadius.circular(24),
+                                  //                   ),
+                                  //                   // labelText: 'Filled',
+                                  //                   hintText: 'Drop Location..',
+                                  //                   hintStyle: TextStyle(
+                                  //                       color: Colors.white70
+                                  //                   ),
+                                  //                   filled: true,
+                                  //                 ),
+                                  //               ),
+                                  //             ),
+                                  //             SizedBox(width:8),
+                                  //           ],
+                                  //         ),
+                                  //       ),
+                                  //     ),
+                                  //   ),),
                                   Positioned(
                                     bottom: (widget.type != 1)
                                         ? media.width * 1.1

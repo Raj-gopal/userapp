@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:tagxiuser/styles/styles.dart';
 import 'dart:async';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
 
   @override
-  State<Loading> createState() => _LoadingState();
+  State<Loading> createState() => _DarkLoaderState();
 }
 
-class _LoadingState extends State<Loading> {
+class _DarkLoaderState extends State<Loading> {
   var _size1 = 10.0;
   var _size2 = 5.0;
   var _size3 = 5.0;
 
   @override
   void initState() {
-    //loader animation
+    // Loader animation using Timer.periodic
     Timer.periodic(const Duration(milliseconds: 250), (timer) {
       if (mounted) {
         setState(() {
+          // Adjust the sizes of the circles in a periodic manner
           if (_size1 == 10.0) {
             _size1 = _size1 - 5.0;
             _size2 = _size2 + 5.0;
@@ -41,48 +41,69 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Container(
-      alignment: Alignment.center,
-      height: media.height * 1,
-      width: media.width * 1,
       color: Colors.transparent.withOpacity(0.6),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 20,
-            width: media.width * 1,
-            child: Row(
+      child: Container(
+        alignment: Alignment.center,
+        height: media.height,
+        width: media.width,
+        decoration: BoxDecoration(
+          color: Colors.black.withOpacity(0.8),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              height: 50,
+              width: 50,
+              // Replace 'assets/logo.png' with your actual logo path
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'Loading...',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 20),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 225),
                   height: _size1,
                   width: _size1,
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: loaderColor),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
                 ),
                 const SizedBox(width: 5),
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 225),
                   height: _size2,
                   width: _size2,
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: loaderColor),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
                 ),
-                const SizedBox(
-                  width: 5,
-                ),
+                const SizedBox(width: 5),
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 225),
                   height: _size3,
                   width: _size3,
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: loaderColor),
-                )
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

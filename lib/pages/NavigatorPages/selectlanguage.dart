@@ -63,7 +63,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                           alignment: Alignment.center,
                           child: Text(
                             languages['en']['text_change_language'],
-                            style: GoogleFonts.roboto(
+                            style: GoogleFonts.montserrat(
                                 fontSize: media.width * twenty,
                                 fontWeight: FontWeight.w600,
                                 color: textColor),
@@ -191,7 +191,12 @@ class _SelectLanguageState extends State<SelectLanguage> {
                           });
                           pop();
                         },
-                        text: languages['en']['text_confirm'])
+                        text: languages['en']['text_confirm'],
+                      // style: GoogleFonts.montserrat(
+                      //     fontSize: media.width * twenty,
+                      //     fontWeight: FontWeight.w600,
+                      //     color: textColor),
+                          )
                   ],
                 ),
               ),
