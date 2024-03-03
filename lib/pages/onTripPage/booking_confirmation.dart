@@ -1060,6 +1060,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                               return Stack(
                                 alignment: Alignment.center,
                                 children: [
+
                                   SizedBox(
                                       height: media.height * 1,
                                       width: media.width * 1,
@@ -1124,33 +1125,107 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       const Maps()),
                                                       (route) => false);
                                             },
-                                            child: Container(
-                                              height: media.width * 0.1,
-                                              width: media.width * 0.1,
-                                              decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                        color: Colors
-                                                            .black
-                                                            .withOpacity(
-                                                            0.2),
-                                                        spreadRadius: 2,
-                                                        blurRadius: 2)
-                                                  ],
-                                                  color: page),
-                                              alignment: Alignment.center,
-                                              child: Icon(
-                                                Icons.arrow_back,
-                                                color: textColor,
-                                              ),
-                                            ),
+                                            // child: Container(
+                                            //   height: media.width * 0.1,
+                                            //   width: media.width * 0.1,
+                                            //   decoration: BoxDecoration(
+                                            //       shape: BoxShape.circle,
+                                            //       boxShadow: [
+                                            //         BoxShadow(
+                                            //             color: Colors
+                                            //                 .black
+                                            //                 .withOpacity(
+                                            //                 0.2),
+                                            //             spreadRadius: 2,
+                                            //             blurRadius: 2)
+                                            //       ],
+                                            //       color: page),
+                                            //   alignment: Alignment.center,
+                                            //   child: Icon(
+                                            //     Icons.arrow_back,
+                                            //     color: textColor,
+                                            //   ),
+                                            // ),
                                           ),
                                         ],
                                       ),
                                     ),
                                   )
                                       : Container(),
+                                  Positioned(
+
+                                    top: media.width *
+                                        0.16,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        height: 188,
+                                        width: media.width*.9,
+
+                                        decoration: BoxDecoration(
+                                          color:Colors.black,
+                                          borderRadius: BorderRadius.circular(15),
+                                        ),
+                                        child:Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(width:8),
+                                              Padding(
+                                                padding: const EdgeInsets.all(4.0),
+                                                child: Text('From:',style:TextStyle(color: Colors.white)),
+                                              ),
+
+                                              SizedBox(
+                                                //width:296,
+                                                height: 56,
+                                                child: TextField(
+                                                  decoration: InputDecoration(
+                                                    prefixIcon: Icon(Icons.search),
+                                                    fillColor: Colors.black.withOpacity(.8),
+                                                    border: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(24),
+                                                    ),
+                                                    // labelText: 'Filled',
+                                                    hintText: 'Pickup Location..',
+                                                    hintStyle: TextStyle(
+                                                        color: Colors.white70
+                                                    ),
+                                                    filled: true,
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(width:8),
+                                              Padding(
+                                                padding: const EdgeInsets.all(4.0),
+                                                child: Text('To:',style:TextStyle(color: Colors.white)),
+                                              ),
+                                              SizedBox(
+                                                //width:296,
+                                                height: 56,
+                                                child: TextField(
+                                                  decoration: InputDecoration(
+                                                    prefixIcon: Icon(Icons.search),
+                                                    fillColor: Colors.black.withOpacity(.8),
+                                                    border: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(24),
+                                                    ),
+                                                    // labelText: 'Filled',
+                                                    hintText: 'Drop Location..',
+                                                    hintStyle: TextStyle(
+                                                        color: Colors.white70
+                                                    ),
+                                                    filled: true,
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(width:8),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),),
                                   Positioned(
                                     bottom: (widget.type != 1)
                                         ? media.width * 1.1
@@ -3076,6 +3151,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                             : Colors.transparent
                                             .withOpacity(0.6),
                                         child: Scaffold(
+
                                           backgroundColor:
                                           Colors.transparent,
                                           body: SingleChildScrollView(
@@ -6089,6 +6165,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                         key: iconDistanceKey,
                                         child: Stack(
                                           children: [
+
                                             Icon(Icons.chat_bubble,
                                                 size: media.width * 0.2,
                                                 color: page,
@@ -6137,201 +6214,8 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                       : Container(),
 
                                   // Bottom sheet
-                                  DraggableScrollableSheet(
-                                  initialChildSize: 0.5,
-                                  minChildSize: 0.5,
-                                      builder: (BuildContext context,ScrollController scrollcontainer){
-                                     return Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.black.withOpacity(.9),
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(24.0),
-                                          topRight: Radius.circular(24.0),
-                                        )
-                                      ),
-                                       child: ListView.builder(
-                                         controller: scrollcontainer,
-                                         physics: ClampingScrollPhysics(),
-                                         itemCount: cars.length,
-                                         itemBuilder: (BuildContext context,int index){
-                                           final car =cars[index];
-
-                                           if(index==0){
-                                             return Padding(
-                                                 padding: EdgeInsets. all (8.0),
-                                                 child: Column (
-                                                     children: [
-                                                   Container(
-                                                     width:50,
-                                                 height: 4,
-                                                 decoration: BoxDecoration(
-                                                   color: Colors.white,
-                                                 borderRadius: BorderRadius.circular((64)),),
-
-                                                   ),
-
-                                                   SizedBox(
-                                                     height: 8,
-                                                   ),
-
-                                                   Text('Select Your Captain',style: TextStyle(
-                                                     color: Colors.white,
-                                                     fontSize: 24,
-                                                     fontWeight: FontWeight.bold,
-
-                                                   ),),
-
-                                                   Padding(
-                                                     padding: const EdgeInsets.only(top:8),
-                                                     child: Row(
-                                                       mainAxisAlignment: MainAxisAlignment.center,
-
-                                                       children: [
-                                                         //search bar
-                                                     SizedBox(
-                                                       width:296,
-                                                       height: 56,
-                                                       child: TextField(
-                                                       decoration: InputDecoration(
-                                                       prefixIcon: Icon(Icons.search),
-                                                         fillColor: Colors.black.withOpacity(.8),
-                                                         border: OutlineInputBorder(
-                                                           borderRadius: BorderRadius.circular(24),
-                                                         ),
-                                                       // labelText: 'Filled',
-                                                         hintText: 'Search By Name, Car Number, driver id..',
-                                                          hintStyle: TextStyle(
-                                                            color: Colors.white70
-                                                          ),
-                                                          filled: true,
-                                                       ),
-                                                     ),
-                                                     ),
-                                                         SizedBox(width:8),
-
-                                                         Container(
-                                                           height: 40,
-                                                           width: 40,
-                                                           decoration: BoxDecoration(
-                                                               shape: BoxShape.circle,
-                                                               color:Colors.white.withOpacity(.1)
-                                                           ),
-                                                           child:Icon(Icons.downloading_sharp,
-                                                             color: Colors.white60,),
-                                                         ),
-                                                         SizedBox(width:8),
-
-                                                         //Referral Icon
-                                                         Container(
-                                                           height: 40,
-                                                           width: 40,
-                                                           decoration: BoxDecoration(
-                                                             shape: BoxShape.circle,
-                                                             color:Colors.white.withOpacity(.1),
-                                                           ),
-                                                           child:Icon(Icons.receipt_long_rounded,
-                                                               color: Colors.white60),
-                                                         ),
-                                                     ],),
-                                                   ),
-                                                 ]
-                                             ),);
-                                           }
-
-                                           return Padding(
-                                             padding: const EdgeInsets.only(left: 8.0,right: 8,top:8),
-                                             child: Container(
-                                               // height: 64,
-                                               // width: 64,
-                                               decoration: BoxDecoration(
-                                                 color: Colors.black87,
-                                                 borderRadius: BorderRadius.circular(16),
-                                               ),
-                                               child: Padding(
-                                                 padding: const EdgeInsets.all(16.0),
-                                                 child: Column(
-                                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                                   children: [
-
-                                                     Row(
-                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                       children: [
-                                                         Text(car['name'],style: TextStyle(color: Colors.white60,fontSize: 24),),
-                                                         Text('12KM',style: TextStyle(color: Colors.white60),),
-                                                       ],
-                                                     ),
-                                                     Row(
-                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                       children: [
-                                                         Text('Car Model',style: TextStyle(color: Colors.white60,fontSize: 16),),
-                                                         Text('12Min',style: TextStyle(color: Colors.white60),),
-                                                       ],
-                                                     ),
-
-                                                     SizedBox(
-                                                       height: 8,
-                                                     ),
-
-                                                     Icon(Icons.star,color: Colors.white60),
-
-                                                     SizedBox(
-                                                       height: 16,
-                                                     ),
-
-                                                     Row(
-                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                       children: [
-                                                         SizedBox(
-                                                           height:56,
-                                                           width: 160,
-                                                           child: ElevatedButton(
-                                                             child: Text('Book Ride',style: TextStyle(
-                                                               color: Colors.white,
-
-                                                             ),),
-                                                             onPressed: () {},
-
-                                                             style: ElevatedButton.styleFrom(
-                                                                backgroundColor: Colors.white.withOpacity(.1),
-                                                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
-                                                                 textStyle: TextStyle(
-                                                                     fontSize: 15,
-                                                                     fontWeight: FontWeight.bold,
-                                                                   color: Colors.white,
-                                                                 )),
-                                                           ),
-                                                         ),
-                                                         SizedBox(
-                                                           height:56,
-                                                           child: OutlinedButton(
-                                                             child: Text('View Details',style: TextStyle(
-                                                                 color: Colors.white
-                                                             ),),
-                                                             onPressed: () {},
-
-                                                             style: ElevatedButton.styleFrom(
-                                                                // backgroundColor: Colors.white.withOpacity(.1),
-                                                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
-                                                                 textStyle: TextStyle(
-                                                                   fontSize: 15,
-                                                                   fontWeight: FontWeight.bold,
-                                                                  // color: Colors.white,
-                                                                 )),
-                                                           ),
-                                                         ),
-                                                       ],
-                                                     ),
 
 
-                                                   ],
-                                                 ),
-                                               ),
-                                             ),
-                                           );
-                                         }
-                                       ),
-                                     );
-                                  })
                                 ],
                               );
                             });
