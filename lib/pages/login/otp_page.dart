@@ -242,7 +242,7 @@ class _OtpState extends State<Otp> {
                                 child: Text(
                                   languages['en']
                                   ['text_phone_verify'],
-                                  style: GoogleFonts.roboto(
+                                  style: GoogleFonts.montserrat(
                                       fontSize: media.width * twentyeight,
                                       fontWeight: FontWeight.bold,
                                       color: textColor),
@@ -253,10 +253,10 @@ class _OtpState extends State<Otp> {
                                 child: Text(
                                   languages['en']
                                   ['text_email_verify'],
-                                  style: GoogleFonts.roboto(
+                                  style: GoogleFonts.montserrat(
                                       fontSize: media.width * twentyeight,
                                       fontWeight: FontWeight.bold,
-                                      color: textColor),
+                                      color: textColor.withOpacity(.5)),
                                 ),
                               ),
 
@@ -265,7 +265,7 @@ class _OtpState extends State<Otp> {
                               ),
                               Text(
                                 languages['en']['text_enter_otp'],
-                                style: GoogleFonts.roboto(
+                                style: GoogleFonts.montserrat(
                                     fontSize: media.width * sixteen,
                                     color: textColor.withOpacity(0.3)),
                               ),
@@ -273,7 +273,7 @@ class _OtpState extends State<Otp> {
                               (widget.from == '1')
                                   ? Text(
                                 countries[phcode]['dial_code'] + phnumber,
-                                style: GoogleFonts.roboto(
+                                style: GoogleFonts.montserrat(
                                     fontSize: media.width * sixteen,
                                     color: textColor,
                                     fontWeight: FontWeight.bold,
@@ -281,7 +281,7 @@ class _OtpState extends State<Otp> {
                               )
                                   : Text(
                                 email,
-                                style: GoogleFonts.roboto(
+                                style: GoogleFonts.montserrat(
                                     fontSize: media.width * sixteen,
                                     color: textColor,
                                     fontWeight: FontWeight.bold,
@@ -300,14 +300,17 @@ class _OtpState extends State<Otp> {
                                   width: MediaQuery.of(context).size.width,
 
                                   fieldWidth: 40,
+
                                   otpFieldStyle: OtpFieldStyle(
 
                                     backgroundColor: Colors.white10,
+                                    borderColor: Colors.white,
+                                    // Set the border color
 
-                                      ),
+
+                                  ),
 
                                   style: TextStyle(
-
                                       fontSize: 17,
                                     color:Colors.white,
                                   ),

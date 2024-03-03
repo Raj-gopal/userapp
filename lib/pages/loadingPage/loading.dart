@@ -52,22 +52,7 @@ class _DarkLoaderState extends State<Loading> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/logo.png',
-              height: 50,
-              width: 50,
-              // Replace 'assets/logo.png' with your actual logo path
-            ),
-            const SizedBox(height: 10),
-            Text(
-              'Loading...',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 20),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

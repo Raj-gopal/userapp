@@ -179,6 +179,7 @@ class _LanguagesState extends State<Languages> {
                             });
                             navigate();
                           },
+
                           text: languages['en']['text_confirm'],),
                     )
                     : Container(),
