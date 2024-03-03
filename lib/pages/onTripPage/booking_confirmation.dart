@@ -6151,6 +6151,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                       ),
                                        child: ListView.builder(
                                          controller: scrollcontainer,
+                                         physics: ClampingScrollPhysics(),
                                          itemCount: cars.length,
                                          itemBuilder: (BuildContext context,int index){
                                            final car =cars[index];
@@ -6159,12 +6160,40 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                              return Padding(
                                                  padding: EdgeInsets. all (8.0),
                                                  child: Column ( children: [
+                                                   Container(
+                                                     width:50,
+                                                 height: 4,
+                                                 decoration: BoxDecoration(
+                                                   color: Colors.white,
+                                                 borderRadius: BorderRadius.circular((64)),),
+
+                                                   ),
+
+                                                   SizedBox(
+                                                     height: 8,
+                                                   ),
+
                                                    Text('Select Your Captain',style: TextStyle(
-                                                     color: Colors.white80,
+                                                     color: Colors.white,
                                                      fontSize: 24,
                                                      fontWeight: FontWeight.bold,
 
                                                    ),),
+
+                                                   Row(
+                                                     children: [
+                                                   SizedBox(
+                                                     width:400,
+                                                     child: TextField(
+                                                     decoration: InputDecoration(
+                                                     prefixIcon: Icon(Icons.search),
+                                                      labelText: 'Filled',
+                                                       hintText: 'Search By Name, Car Number, driver id..',
+                                                        filled: true,
+                                                     ),
+                                                 ),
+                                                   ),
+                                                   ],),
                                                  ]
                                              ),);
                                            }
@@ -6174,10 +6203,11 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                              margin: EdgeInsets.zero,
                                              color: Colors.transparent,
                                              child: ListTile(
+                                               contentPadding: EdgeInsets.all(8),
                                                onTap: (){},
                                                leading:Icon(Icons.car_rental,color: Colors.white60,),
                                                title: Text(car['name'],style: TextStyle(color: Colors.white60),),
-                                               trailing: Text(car['price'].toString(),style: TextStyle(color: Colors.white60),),
+                                               trailing: Text(car['price'].toString(),style: TextStyle(color: Colors.white60,fontSize: 16),),
                                              ),
                                            );
                                          }
