@@ -6159,7 +6159,8 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                            if(index==0){
                                              return Padding(
                                                  padding: EdgeInsets. all (8.0),
-                                                 child: Column ( children: [
+                                                 child: Column (
+                                                     children: [
                                                    Container(
                                                      width:50,
                                                  height: 4,
@@ -6180,34 +6181,151 @@ class _BookingConfirmationState extends State<BookingConfirmation>
 
                                                    ),),
 
-                                                   Row(
-                                                     children: [
-                                                   SizedBox(
-                                                     width:400,
-                                                     child: TextField(
-                                                     decoration: InputDecoration(
-                                                     prefixIcon: Icon(Icons.search),
-                                                      labelText: 'Filled',
-                                                       hintText: 'Search By Name, Car Number, driver id..',
-                                                        filled: true,
+                                                   Padding(
+                                                     padding: const EdgeInsets.only(top:8),
+                                                     child: Row(
+                                                       mainAxisAlignment: MainAxisAlignment.center,
+
+                                                       children: [
+                                                         //search bar
+                                                     SizedBox(
+                                                       width:296,
+                                                       height: 56,
+                                                       child: TextField(
+                                                       decoration: InputDecoration(
+                                                       prefixIcon: Icon(Icons.search),
+                                                         fillColor: Colors.black.withOpacity(.8),
+                                                         border: OutlineInputBorder(
+                                                           borderRadius: BorderRadius.circular(24),
+                                                         ),
+                                                       // labelText: 'Filled',
+                                                         hintText: 'Search By Name, Car Number, driver id..',
+                                                          hintStyle: TextStyle(
+                                                            color: Colors.white70
+                                                          ),
+                                                          filled: true,
+                                                       ),
                                                      ),
-                                                 ),
+                                                     ),
+                                                         SizedBox(width:8),
+
+                                                         Container(
+                                                           height: 40,
+                                                           width: 40,
+                                                           decoration: BoxDecoration(
+                                                               shape: BoxShape.circle,
+                                                               color:Colors.white.withOpacity(.1)
+                                                           ),
+                                                           child:Icon(Icons.downloading_sharp,
+                                                             color: Colors.white60,),
+                                                         ),
+                                                         SizedBox(width:8),
+
+                                                         //Referral Icon
+                                                         Container(
+                                                           height: 40,
+                                                           width: 40,
+                                                           decoration: BoxDecoration(
+                                                             shape: BoxShape.circle,
+                                                             color:Colors.white.withOpacity(.1),
+                                                           ),
+                                                           child:Icon(Icons.receipt_long_rounded,
+                                                               color: Colors.white60),
+                                                         ),
+                                                     ],),
                                                    ),
-                                                   ],),
                                                  ]
                                              ),);
                                            }
 
-                                           return Card(
-                                             elevation: 0,
-                                             margin: EdgeInsets.zero,
-                                             color: Colors.transparent,
-                                             child: ListTile(
-                                               contentPadding: EdgeInsets.all(8),
-                                               onTap: (){},
-                                               leading:Icon(Icons.car_rental,color: Colors.white60,),
-                                               title: Text(car['name'],style: TextStyle(color: Colors.white60),),
-                                               trailing: Text(car['price'].toString(),style: TextStyle(color: Colors.white60,fontSize: 16),),
+                                           return Padding(
+                                             padding: const EdgeInsets.only(left: 8.0,right: 8,top:8),
+                                             child: Container(
+                                               // height: 64,
+                                               // width: 64,
+                                               decoration: BoxDecoration(
+                                                 color: Colors.black87,
+                                                 borderRadius: BorderRadius.circular(16),
+                                               ),
+                                               child: Padding(
+                                                 padding: const EdgeInsets.all(16.0),
+                                                 child: Column(
+                                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                                   children: [
+
+                                                     Row(
+                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                       children: [
+                                                         Text(car['name'],style: TextStyle(color: Colors.white60,fontSize: 24),),
+                                                         Text('12KM',style: TextStyle(color: Colors.white60),),
+                                                       ],
+                                                     ),
+                                                     Row(
+                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                       children: [
+                                                         Text('Car Model',style: TextStyle(color: Colors.white60,fontSize: 16),),
+                                                         Text('12Min',style: TextStyle(color: Colors.white60),),
+                                                       ],
+                                                     ),
+
+                                                     SizedBox(
+                                                       height: 8,
+                                                     ),
+
+                                                     Icon(Icons.star,color: Colors.white60),
+
+                                                     SizedBox(
+                                                       height: 16,
+                                                     ),
+
+                                                     Row(
+                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                       children: [
+                                                         SizedBox(
+                                                           height:56,
+                                                           width: 160,
+                                                           child: ElevatedButton(
+                                                             child: Text('Book Ride',style: TextStyle(
+                                                               color: Colors.white,
+
+                                                             ),),
+                                                             onPressed: () {},
+
+                                                             style: ElevatedButton.styleFrom(
+                                                                backgroundColor: Colors.white.withOpacity(.1),
+                                                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                 textStyle: TextStyle(
+                                                                     fontSize: 15,
+                                                                     fontWeight: FontWeight.bold,
+                                                                   color: Colors.white,
+                                                                 )),
+                                                           ),
+                                                         ),
+                                                         SizedBox(
+                                                           height:56,
+                                                           child: OutlinedButton(
+                                                             child: Text('View Details',style: TextStyle(
+                                                                 color: Colors.white
+                                                             ),),
+                                                             onPressed: () {},
+
+                                                             style: ElevatedButton.styleFrom(
+                                                                // backgroundColor: Colors.white.withOpacity(.1),
+                                                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                 textStyle: TextStyle(
+                                                                   fontSize: 15,
+                                                                   fontWeight: FontWeight.bold,
+                                                                  // color: Colors.white,
+                                                                 )),
+                                                           ),
+                                                         ),
+                                                       ],
+                                                     ),
+
+
+                                                   ],
+                                                 ),
+                                               ),
                                              ),
                                            );
                                          }
