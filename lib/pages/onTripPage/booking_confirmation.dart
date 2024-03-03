@@ -26,6 +26,15 @@ import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart' as perm;
 import 'package:geolocator/geolocator.dart' as geolocs;
 
+
+List cars=[
+  {'name': 'Roshan','price':200},
+  {'name': 'Rishi','price':200},
+  {'name': 'Abhishek','price':200},
+  {'name': 'Abhijeet','price':200},
+
+];
+
 // ignore: must_be_immutable
 class BookingConfirmation extends StatefulWidget {
   // const BookingConfirmation({Key? key}) : super(key: key);
@@ -3607,6 +3616,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                               ),
                                             ),
                                           ),
+
                                         ),
                                       ))
                                       : Container(),
@@ -6124,7 +6134,56 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                           ],
                                         )),
                                   )
-                                      : Container()
+                                      : Container(),
+
+                                  // Bottom sheet
+                                  DraggableScrollableSheet(
+                                  initialChildSize: 0.5,
+                                  minChildSize: 0.5,
+                                      builder: (BuildContext context,ScrollController scrollcontainer){
+                                     return Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.black.withOpacity(.9),
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(24.0),
+                                          topRight: Radius.circular(24.0),
+                                        )
+                                      ),
+                                       child: ListView.builder(
+                                         controller: scrollcontainer,
+                                         itemCount: cars.length,
+                                         itemBuilder: (BuildContext context,int index){
+                                           final car =cars[index];
+
+                                           if(index==0){
+                                             return Padding(
+                                                 padding: EdgeInsets. all (8.0),
+                                                 child: Column ( children: [
+                                                   Text('Select Your Captain',style: TextStyle(
+                                                     color: Colors.white80,
+                                                     fontSize: 24,
+                                                     fontWeight: FontWeight.bold,
+
+                                                   ),),
+                                                 ]
+                                             ),);
+                                           }
+
+                                           return Card(
+                                             elevation: 0,
+                                             margin: EdgeInsets.zero,
+                                             color: Colors.transparent,
+                                             child: ListTile(
+                                               onTap: (){},
+                                               leading:Icon(Icons.car_rental,color: Colors.white60,),
+                                               title: Text(car['name'],style: TextStyle(color: Colors.white60),),
+                                               trailing: Text(car['price'].toString(),style: TextStyle(color: Colors.white60),),
+                                             ),
+                                           );
+                                         }
+                                       ),
+                                     );
+                                  })
                                 ],
                               );
                             });

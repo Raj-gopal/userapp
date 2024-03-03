@@ -86,7 +86,7 @@ class _LoginState extends State<Login> {
                       children: [
                         SizedBox(height: 50),
                         Container(
-                          alignment: Alignment.centerLeft,
+                          alignment: Alignment.center,
                           child: Text(
                             "WELCOME TO",
                             style: GoogleFonts.poppins(
@@ -106,7 +106,7 @@ class _LoginState extends State<Login> {
                                   fit: BoxFit.contain)),
                         ),
                         Container(
-                          alignment: Alignment.centerRight,
+                          alignment: Alignment.center,
                             child: Text(
                               "Book Rides Like a Pro",
                               style: GoogleFonts.poppins(
@@ -133,7 +133,7 @@ class _LoginState extends State<Login> {
                         ),
                         SizedBox(
 
-                          height: 5,
+                          height: 8,
                         ),
                         Container(
                           padding: const EdgeInsets.only(bottom: 5),
@@ -381,6 +381,9 @@ class _LoginState extends State<Login> {
                                 child: TextFormField(
                                   controller: controller,
                                   textAlign: TextAlign.center,
+                                  cursorColor: Colors.white,
+
+
                                   onChanged: (val) {
                                     setState(() {
                                       phnumber = controller.text;
@@ -401,6 +404,7 @@ class _LoginState extends State<Login> {
                                   decoration: InputDecoration(
                                     hintText: "X X X X X X X X X X",
                                     alignLabelWithHint: true,
+                                    focusColor: Colors.white,
 
                                     counterText: '',
                                     border: OutlineInputBorder(
@@ -537,8 +541,8 @@ class _LoginState extends State<Login> {
                           height: media.height * 0.1,
                         ),
                         SizedBox(
-                          width: 200, // <-- Your width
-                          height: 40, // <-
+                          width: 400, // <-- Your width
+                          height: 48, // <-
 
 
                                 child:  ElevatedButton(
@@ -576,7 +580,9 @@ class _LoginState extends State<Login> {
                                       _isLoading = false;
                                     });
                                   },
-                                  child: Text("Send OTP"),
+                                  child: Text("SEND OTP",style: TextStyle(
+                                    fontSize: 16,color: Colors.white70
+                                  ),),
                                 ),
                               )
 

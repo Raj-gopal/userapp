@@ -300,18 +300,20 @@ class _OtpState extends State<Otp> {
                                   width: MediaQuery.of(context).size.width,
 
                                   fieldWidth: 40,
-
                                   otpFieldStyle: OtpFieldStyle(
+
                                     backgroundColor: Colors.white10,
 
                                       ),
 
                                   style: TextStyle(
+
                                       fontSize: 17,
                                     color:Colors.white,
                                   ),
                                   textFieldAlignment: MainAxisAlignment.spaceAround,
                                   fieldStyle: FieldStyle.box,
+
 
                                   controller: otpController,
 
