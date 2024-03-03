@@ -80,7 +80,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               width: media.width * 0.3,
                                               child: Text(
                                                 userDetails['name'],
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                     fontSize:
                                                         media.width * eighteen,
                                                     color: textColor,
@@ -118,7 +118,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                         width: media.width * 0.45,
                                         child: Text(
                                           userDetails['email'],
-                                          style: GoogleFonts.roboto(
+                                          style: GoogleFonts.montserrat(
                                               fontSize: media.width * fourteen,
                                               color: textColor),
                                           maxLines: 1,
@@ -182,7 +182,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         style: GoogleFonts
-                                                            .roboto(
+                                                            .montserrat(
                                                                 fontSize: media
                                                                         .width *
                                                                     sixteen,
@@ -211,7 +211,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                                                 'notifications_count']
                                                             .toString(),
                                                         style:
-                                                            GoogleFonts.roboto(
+                                                            GoogleFonts.montserrat(
                                                                 fontSize: media
                                                                         .width *
                                                                     fourteen,
@@ -252,7 +252,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_enable_history'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -295,7 +295,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                                 languages['en']
                                                     ['text_enable_wallet'],
                                                 overflow: TextOverflow.ellipsis,
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                     fontSize:
                                                         media.width * sixteen,
                                                     color: textColor),
@@ -335,7 +335,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_enable_referal'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -374,7 +374,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_favourites'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -414,7 +414,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_faq'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -457,7 +457,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_sos'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -499,7 +499,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_change_language'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -543,7 +543,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_make_complaints'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -581,7 +581,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_about'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -620,7 +620,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_delete_account'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),
@@ -660,7 +660,7 @@ class _NavDrawerState extends State<NavDrawer> {
                                               languages['en']
                                                   ['text_logout'],
                                               overflow: TextOverflow.ellipsis,
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor),

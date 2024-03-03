@@ -203,14 +203,14 @@ class _LoginState extends State<Login> {
                                                                   .none,
                                                               hintText: languages['en'][
                                                                   'text_search'],
-                                                              hintStyle: GoogleFonts.roboto(
+                                                              hintStyle: GoogleFonts.montserrat(
                                                                   color: textColor
                                                                       .withOpacity(
                                                                           0.4),
                                                                   fontSize: media.width *
                                                                       sixteen)),
                                                           style: GoogleFonts
-                                                              .roboto(
+                                                              .montserrat(
                                                                   color:
                                                                       textColor),
                                                           onChanged: (val) {
@@ -260,13 +260,13 @@ class _LoginState extends State<Login> {
                                                                                               width: media.width * 0.4,
                                                                                               child: Text(
                                                                                                 countries[i]['name'],
-                                                                                                style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                                                                                                style: GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor),
                                                                                               )),
                                                                                         ],
                                                                                       ),
                                                                                       Text(
                                                                                         countries[i]['dial_code'],
-                                                                                        style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor),
                                                                                       )
                                                                                     ],
                                                                                   ),
@@ -295,13 +295,13 @@ class _LoginState extends State<Login> {
                                                                                                   width: media.width * 0.4,
                                                                                                   child: Text(
                                                                                                     countries[i]['name'],
-                                                                                                    style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                                                                                                    style: GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor),
                                                                                                   )),
                                                                                             ],
                                                                                           ),
                                                                                           Text(
                                                                                             countries[i]['dial_code'],
-                                                                                            style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                                                                                            style: GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor),
                                                                                           )
                                                                                         ],
                                                                                       ),
@@ -473,7 +473,7 @@ class _LoginState extends State<Login> {
                                   Text(
                                     languages['en']['text_agree'] +
                                         ' ',
-                                    style: GoogleFonts.roboto(
+                                    style: GoogleFonts.montserrat(
                                         fontSize: media.width * sixteen,
                                         color: textColor.withOpacity(0.7)),
                                   ),
@@ -483,14 +483,14 @@ class _LoginState extends State<Login> {
                                     },
                                     child: Text(
                                       languages['en']['text_terms'],
-                                      style: GoogleFonts.roboto(
+                                      style: GoogleFonts.montserrat(
                                           fontSize: media.width * sixteen,
                                           color: buttonColor),
                                     ),
                                   ),
                                   Text(
                                     ' ${languages['en']['text_and']} ',
-                                    style: GoogleFonts.roboto(
+                                    style: GoogleFonts.montserrat(
                                         fontSize: media.width * sixteen,
                                         color: textColor.withOpacity(0.7)),
                                   ),
@@ -501,7 +501,7 @@ class _LoginState extends State<Login> {
                                     child: Text(
                                       languages['en']
                                           ['text_privacy'],
-                                      style: GoogleFonts.roboto(
+                                      style: GoogleFonts.montserrat(
                                           fontSize: media.width * sixteen,
                                           color: buttonColor),
                                     ),
@@ -523,7 +523,7 @@ class _LoginState extends State<Login> {
                             SizedBox(width: media.width * 0.02),
                             Text(
                               languages['en']['text_continue_with'],
-                              style: GoogleFonts.roboto(
+                              style: GoogleFonts.montserrat(
                                 color: textColor.withOpacity(0.7),
                                 fontSize: media.width * sixteen,
                                 fontWeight: FontWeight.w400,
@@ -543,7 +543,7 @@ class _LoginState extends State<Login> {
                               },
                               child: Text(
                                 languages['en']['text_email'],
-                                style: GoogleFonts.roboto(
+                                style: GoogleFonts.montserrat(
                                     fontSize: media.width * sixteen,
                                     fontWeight: FontWeight.w400,
                                     color: buttonColor),

@@ -220,7 +220,7 @@ class _GetStartedPhoneOtpState extends State<GetStartedPhoneOtp> {
                                 child: Text(
                                   languages['en']
                                       ['text_phone_verify'],
-                                  style: GoogleFonts.roboto(
+                                  style: GoogleFonts.montserrat(
                                       fontSize: media.width * twentyeight,
                                       fontWeight: FontWeight.bold,
                                       color: textColor),
@@ -231,14 +231,14 @@ class _GetStartedPhoneOtpState extends State<GetStartedPhoneOtp> {
                               ),
                               Text(
                                 languages['en']['text_enter_otp'],
-                                style: GoogleFonts.roboto(
+                                style: GoogleFonts.montserrat(
                                     fontSize: media.width * sixteen,
                                     color: textColor.withOpacity(0.3)),
                               ),
                               const SizedBox(height: 10),
                               Text(
                                 countries[phcode]['dial_code'] + phnumber,
-                                style: GoogleFonts.roboto(
+                                style: GoogleFonts.montserrat(
                                     fontSize: media.width * sixteen,
                                     color: textColor,
                                     fontWeight: FontWeight.bold,
@@ -276,7 +276,7 @@ class _GetStartedPhoneOtpState extends State<GetStartedPhoneOtp> {
                                       hintStyle: TextStyle(
                                           color: textColor.withOpacity(0.4))),
                                   textAlign: TextAlign.center,
-                                  style: GoogleFonts.roboto(
+                                  style: GoogleFonts.montserrat(
                                     fontSize: media.width * twenty,
                                     color: textColor,
                                     fontWeight: FontWeight.w600,
@@ -294,7 +294,7 @@ class _GetStartedPhoneOtpState extends State<GetStartedPhoneOtp> {
                                           top: media.height * 0.02),
                                       child: Text(
                                         _error,
-                                        style: GoogleFonts.roboto(
+                                        style: GoogleFonts.montserrat(
                                             fontSize: media.width * sixteen,
                                             color: Colors.red),
                                       ),

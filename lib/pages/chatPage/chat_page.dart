@@ -86,7 +86,7 @@ class _ChatPageState extends State<ChatPage> {
                                   child: Text(
                                     languages['en']
                                         ['text_chatwithdriver'],
-                                    style: GoogleFonts.roboto(
+                                    style: GoogleFonts.montserrat(
                                         fontSize: media.width * twenty,
                                         color: textColor,
                                         fontWeight: FontWeight.w600),
@@ -179,7 +179,7 @@ class _ChatPageState extends State<ChatPage> {
                                                               : const Color(0xff222222)),
                                                   child: Text(
                                                     chatList[i]['message'],
-                                                    style: GoogleFonts.roboto(
+                                                    style: GoogleFonts.montserrat(
                                                         fontSize: media.width *
                                                             fourteen,
                                                         color: (chatList[i][
@@ -236,13 +236,13 @@ class _ChatPageState extends State<ChatPage> {
                                           border: InputBorder.none,
                                           hintText: languages['en']
                                               ['text_entermessage'],
-                                          hintStyle: GoogleFonts.roboto(
+                                          hintStyle: GoogleFonts.montserrat(
                                               fontSize: media.width * twelve,
                                               color: (isDarkTheme == true)
                                                   ? textColor.withOpacity(0.5)
                                                   : hintColor)),
                                       style:
-                                          GoogleFonts.roboto(color: textColor),
+                                          GoogleFonts.montserrat(color: textColor),
                                       minLines: 1,
                                       maxLines: 4,
                                       onChanged: (val) {},

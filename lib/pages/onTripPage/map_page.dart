@@ -26,6 +26,7 @@ import 'package:geolocator/geolocator.dart' as geolocs;
 import 'package:permission_handler/permission_handler.dart' as perm;
 import 'package:vector_math/vector_math.dart' as vector;
 import 'package:http/http.dart' as http;
+import 'package:google_fonts/google_fonts.dart';
 
 class Maps extends StatefulWidget {
   const Maps({Key? key}) : super(key: key);
@@ -1317,15 +1318,14 @@ class _MapsState extends State<Maps>
                                                             ),
                                                             Container(
                                                               alignment: Alignment.centerLeft,
-                                                              child: const Text("Select The Pickup Point:",
+                                                              child: Text("Select The Pickup Point:",
                                                                 textAlign:TextAlign.left,
-                                                                style: TextStyle(
+                                                                style: GoogleFonts.montserrat(
                                                                   fontSize: 20,
                                                                   color: Colors.white,
                                                                   fontWeight: FontWeight.w700,
                                                                   fontStyle: FontStyle.normal,
-                                                                  letterSpacing: 1,
-                                                                  wordSpacing: 5,
+
 
 
                                                                 ),  ),
@@ -1422,7 +1422,7 @@ class _MapsState extends State<Maps>
                                                                           decoration: InputDecoration(
                                                                             contentPadding: (languageDirection == 'rtl') ? EdgeInsets.only(bottom: media.width * 0.035) : EdgeInsets.only(bottom: media.width * 0.047),
                                                                             hintText: languages['en']['text_4lettersforautofill'],
-                                                                            hintStyle: GoogleFonts.roboto(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.4) : hintColor),
+                                                                            hintStyle: GoogleFonts.montserrat(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.4) : hintColor),
                                                                             border: InputBorder.none,
                                                                           ),
                                                                           style: GoogleFonts.roboto(color: textColor),
@@ -1457,7 +1457,7 @@ class _MapsState extends State<Maps>
                                                                             width: media.width * 0.55,
                                                                             child: Text(
                                                                               (addressList.where((element) => element.id == 'pickup').isNotEmpty) ? addressList.firstWhere((element) => element.id == 'pickup', orElse: () => AddressList(id: '', address: '', latlng: const LatLng(0.0, 0.0))).address : languages['en']['text_4lettersforautofill'],
-                                                                              style: GoogleFonts.roboto(
+                                                                              style: GoogleFonts.montserrat(
                                                                                 fontSize: media.width * twelve,
                                                                                 color: textColor,
                                                                               ),
@@ -1502,15 +1502,14 @@ class _MapsState extends State<Maps>
                                                             ),
                                                         Container(
                                                           alignment: Alignment.centerLeft,
-                                                            child: const Text("Select The Drop Point:",
+                                                            child:  Text("Select The Drop Point:",
                                                               textAlign:TextAlign.left,
-                                                              style: TextStyle(
+                                                              style: GoogleFonts.montserrat(
                                                                 fontSize: 20,
                                                                 color: Colors.white,
                                                                 fontWeight: FontWeight.w700,
                                                                 fontStyle: FontStyle.normal,
-                                                                letterSpacing: 1,
-                                                                wordSpacing: 5,
+
 
 
                                                               ),  ),
@@ -1593,6 +1592,7 @@ class _MapsState extends State<Maps>
                                                                         ),
                                                                       ),
                                                                       SizedBox(
+                                                                        height: 56,
                                                                           width:
                                                                               media.width * 0.02),
                                                                       (_dropaddress == true &&
@@ -1604,9 +1604,9 @@ class _MapsState extends State<Maps>
                                                                                     contentPadding: (languageDirection == 'rtl') ? EdgeInsets.only(bottom: media.width * 0.035) : EdgeInsets.only(bottom: media.width * 0.047),
                                                                                     border: InputBorder.none,
                                                                                     hintText: languages['en']['text_4lettersforautofill'],
-                                                                                    hintStyle: GoogleFonts.roboto(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.3) : hintColor),
+                                                                                    hintStyle: GoogleFonts.montserrat(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.3) : hintColor),
                                                                                   ),
-                                                                                  style: GoogleFonts.roboto(color: textColor),
+                                                                                  style: GoogleFonts.montserrat(color: textColor),
                                                                                   maxLines: 1,
                                                                                   onChanged: (val) {
                                                                                     _debouncer.run(() {
@@ -1632,7 +1632,7 @@ class _MapsState extends State<Maps>
                                                                           : Expanded(
                                                                               child: Text(
                                                                               languages['en']['text_4lettersforautofill'],
-                                                                              style: GoogleFonts.roboto(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.3) : hintColor),
+                                                                              style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.3) : hintColor),
                                                                             )),
                                                                     ],
                                                                   )),
@@ -1712,7 +1712,7 @@ class _MapsState extends State<Maps>
                                                                                                             child: SizedBox(
                                                                                                               width: media.width * 0.7,
                                                                                                               child: Text(addAutoFill[i]['description'],
-                                                                                                                  style: GoogleFonts.roboto(
+                                                                                                                  style: GoogleFonts.montserrat(
                                                                                                                     fontSize: media.width * twelve,
                                                                                                                     color: textColor,
                                                                                                                   ),
@@ -1765,7 +1765,7 @@ class _MapsState extends State<Maps>
                                                                                         width: media.width * 0.9,
                                                                                         child: Text(
                                                                                           languages['en'][(_pickaddress == true) ? 'text_pick_suggestion' : 'text_drop_suggestion'],
-                                                                                          style: GoogleFonts.roboto(
+                                                                                          style: GoogleFonts.montserrat(
                                                                                             fontSize: media.width * sixteen,
                                                                                             color: textColor,
                                                                                             fontWeight: FontWeight.bold,
@@ -1820,7 +1820,7 @@ class _MapsState extends State<Maps>
                                                                                                         children: [
                                                                                                           Text(
                                                                                                             favAddress[i]['address_name'],
-                                                                                                            style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
+                                                                                                            style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor),
                                                                                                           ),
                                                                                                           SizedBox(
                                                                                                             height: media.width * 0.03,
@@ -1907,7 +1907,7 @@ class _MapsState extends State<Maps>
                                                                                         ),
                                                                                         Text(
                                                                                           languages['en']['text_chooseonmap'],
-                                                                                          style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: buttonColor),
+                                                                                          style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: buttonColor),
                                                                                         ),
                                                                                       ],
                                                                                     ),
@@ -2227,7 +2227,7 @@ class _MapsState extends State<Maps>
                                                             [
                                                             'text_enterfavname'],
                                                         hintStyle:
-                                                            GoogleFonts.roboto(
+                                                            GoogleFonts.montserrat(
                                                                 fontSize: media
                                                                         .width *
                                                                     twelve,

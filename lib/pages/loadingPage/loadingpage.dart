@@ -166,7 +166,7 @@ class _LoadingPageState extends State<LoadingPage> {
                                       width: media.width * 0.8,
                                       child: Text(
                                         'New version of this app is available in store, please update the app for continue using',
-                                        style: GoogleFonts.roboto(
+                                        style: GoogleFonts.montserrat(
                                             fontSize: media.width * sixteen,
                                             fontWeight: FontWeight.w600),
                                       )),

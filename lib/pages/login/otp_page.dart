@@ -446,6 +446,7 @@ class _OtpState extends State<Otp> {
                                 ),
                               )
                                   : Container(
+                                height: 56,
                                 alignment: Alignment.center,
                                 child: Button(
                                   onTap: () async {

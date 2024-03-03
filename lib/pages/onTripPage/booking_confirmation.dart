@@ -1152,80 +1152,80 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                     ),
                                   )
                                       : Container(),
-                                  // Positioned(
-                                  //
-                                  //   top: media.width *
-                                  //       0.16,
-                                  //   child: Padding(
-                                  //     padding: const EdgeInsets.all(8.0),
-                                  //     child: Container(
-                                  //       height: 188,
-                                  //       width: media.width*.9,
-                                  //
-                                  //       decoration: BoxDecoration(
-                                  //         color:Colors.black,
-                                  //         borderRadius: BorderRadius.circular(15),
-                                  //       ),
-                                  //       child:Padding(
-                                  //         padding: const EdgeInsets.all(8.0),
-                                  //         child: Column(
-                                  //           crossAxisAlignment: CrossAxisAlignment.start,
-                                  //           children: [
-                                  //             SizedBox(width:8),
-                                  //             Padding(
-                                  //               padding: const EdgeInsets.all(4.0),
-                                  //               child: Text('From:',style:TextStyle(color: Colors.white)),
-                                  //             ),
-                                  //
-                                  //             SizedBox(
-                                  //               //width:296,
-                                  //               height: 56,
-                                  //               child: TextField(
-                                  //                 decoration: InputDecoration(
-                                  //                   prefixIcon: Icon(Icons.search),
-                                  //                   fillColor: Colors.black.withOpacity(.8),
-                                  //                   border: OutlineInputBorder(
-                                  //                     borderRadius: BorderRadius.circular(24),
-                                  //                   ),
-                                  //                   // labelText: 'Filled',
-                                  //                   hintText: 'Pickup Location..',
-                                  //                   hintStyle: TextStyle(
-                                  //                       color: Colors.white70
-                                  //                   ),
-                                  //                   filled: true,
-                                  //                 ),
-                                  //               ),
-                                  //             ),
-                                  //             SizedBox(width:8),
-                                  //             Padding(
-                                  //               padding: const EdgeInsets.all(4.0),
-                                  //               child: Text('To:',style:TextStyle(color: Colors.white)),
-                                  //             ),
-                                  //             SizedBox(
-                                  //               //width:296,
-                                  //               height: 56,
-                                  //               child: TextField(
-                                  //                 decoration: InputDecoration(
-                                  //                   prefixIcon: Icon(Icons.search),
-                                  //                   fillColor: Colors.black.withOpacity(.8),
-                                  //                   border: OutlineInputBorder(
-                                  //                     borderRadius: BorderRadius.circular(24),
-                                  //                   ),
-                                  //                   // labelText: 'Filled',
-                                  //                   hintText: 'Drop Location..',
-                                  //                   hintStyle: TextStyle(
-                                  //                       color: Colors.white70
-                                  //                   ),
-                                  //                   filled: true,
-                                  //                 ),
-                                  //               ),
-                                  //             ),
-                                  //             SizedBox(width:8),
-                                  //           ],
-                                  //         ),
-                                  //       ),
-                                  //     ),
-                                  //   ),),
+                                  Positioned(
+
+                                    top: media.width *
+                                        0.16,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                        height: 188,
+                                        width: media.width*.9,
+
+                                        decoration: BoxDecoration(
+                                          color:Colors.black,
+                                          borderRadius: BorderRadius.circular(15),
+                                        ),
+                                        child:Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(width:8),
+                                              Padding(
+                                                padding: const EdgeInsets.all(4.0),
+                                                child: Text('From:',style:TextStyle(color: Colors.white)),
+                                              ),
+
+                                              SizedBox(
+                                                //width:296,
+                                                height: 56,
+                                                child: TextField(
+                                                  decoration: InputDecoration(
+                                                    prefixIcon: Icon(Icons.search),
+                                                    fillColor: Colors.black.withOpacity(.8),
+                                                    border: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(24),
+                                                    ),
+                                                    // labelText: 'Filled',
+                                                    hintText: 'Pickup Location..',
+                                                    hintStyle: TextStyle(
+                                                        color: Colors.white70
+                                                    ),
+                                                    filled: true,
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(width:8),
+                                              Padding(
+                                                padding: const EdgeInsets.all(4.0),
+                                                child: Text('To:',style:TextStyle(color: Colors.white)),
+                                              ),
+                                              SizedBox(
+                                                //width:296,
+                                                height: 56,
+                                                child: TextField(
+                                                  decoration: InputDecoration(
+                                                    prefixIcon: Icon(Icons.search),
+                                                    fillColor: Colors.black.withOpacity(.8),
+                                                    border: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.circular(24),
+                                                    ),
+                                                    // labelText: 'Filled',
+                                                    hintText: 'Drop Location..',
+                                                    hintStyle: TextStyle(
+                                                        color: Colors.white70
+                                                    ),
+                                                    filled: true,
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(width:8),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),),
                                   Positioned(
                                     bottom: (widget.type != 1)
                                         ? media.width * 1.1
@@ -1269,7 +1269,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                 alignment: Alignment.center,
                                                 child: Text(
                                                   'SOS',
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize:
                                                       media.width *
                                                           fourteen,
@@ -1433,7 +1433,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       choosenLanguage]
                                                       [
                                                       'text_availablerides'],
-                                                      style: GoogleFonts.roboto(
+                                                      style: GoogleFonts.montserrat(
                                                           fontSize:
                                                           media.width *
                                                               fourteen,
@@ -1544,11 +1544,11 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                   (minutes[etaDetails[i]['type_id']] != '')
                                                                                       ? Text(
                                                                                     minutes[etaDetails[i]['type_id']].toString(),
-                                                                                    style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
+                                                                                    style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
                                                                                   )
                                                                                       : Text(
                                                                                     '- -',
-                                                                                    style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
+                                                                                    style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
                                                                                   )
                                                                                 ],
                                                                               ),
@@ -1558,14 +1558,14 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                               Column(
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
-                                                                                  Text(etaDetails[i]['name'], style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600)),
+                                                                                  Text(etaDetails[i]['name'], style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600)),
                                                                                   Row(
                                                                                     children: [
                                                                                       SizedBox(
                                                                                         width: media.width * 0.3,
                                                                                         child: Text(
                                                                                           etaDetails[i]['short_description'],
-                                                                                          style: GoogleFonts.roboto(
+                                                                                          style: GoogleFonts.montserrat(
                                                                                             fontSize: media.width * twelve,
                                                                                             color: textColor,
                                                                                           ),
@@ -1596,7 +1596,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                     children: [
                                                                                       Text(
                                                                                         etaDetails[i]['currency'] + ' ' + etaDetails[i]['total'].toStringAsFixed(2),
-                                                                                        style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                                       ),
                                                                                     ],
                                                                                   )
@@ -1605,15 +1605,15 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                     children: [
                                                                                       Text(
                                                                                         etaDetails[i]['currency'] + ' ',
-                                                                                        style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                                       ),
                                                                                       Text(
                                                                                         etaDetails[i]['total'].toStringAsFixed(2),
-                                                                                        style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600, decoration: TextDecoration.lineThrough),
+                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600, decoration: TextDecoration.lineThrough),
                                                                                       ),
                                                                                       Text(
                                                                                         ' ${etaDetails[i]['discounted_totel'].toStringAsFixed(2)}',
-                                                                                        style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                                       )
                                                                                     ],
                                                                                   ))
@@ -1684,7 +1684,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                       },
                                                                       child: Text(
                                                                         etaDetails[i]['package_name'],
-                                                                        style: GoogleFonts.roboto(
+                                                                        style: GoogleFonts.montserrat(
                                                                             fontSize: media.width * sixteen,
                                                                             fontWeight: FontWeight.w600,
                                                                             color: (rentalChoosenOption == i)
@@ -1800,11 +1800,11 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                         (minutes[rentalOption[i]['type_id']] != "")
                                                                                             ? Text(
                                                                                           minutes[rentalOption[i]['type_id']].toString(),
-                                                                                          style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
+                                                                                          style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
                                                                                         )
                                                                                             : Text(
                                                                                           '- -',
-                                                                                          style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
+                                                                                          style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
                                                                                         )
                                                                                       ],
                                                                                     ),
@@ -1814,14 +1814,14 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                     Column(
                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                       children: [
-                                                                                        Text(rentalOption[i]['name'], style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600)),
+                                                                                        Text(rentalOption[i]['name'], style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600)),
                                                                                         Row(
                                                                                           children: [
                                                                                             SizedBox(
                                                                                               width: media.width * 0.3,
                                                                                               child: Text(
                                                                                                 rentalOption[i]['short_description'],
-                                                                                                style: GoogleFonts.roboto(
+                                                                                                style: GoogleFonts.montserrat(
                                                                                                   fontSize: media.width * twelve,
                                                                                                   color: textColor,
                                                                                                 ),
@@ -1848,7 +1848,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                           children: [
                                                                                             Text(
                                                                                               rentalOption[i]['currency'] + ' ' + rentalOption[i]['fare_amount'].toStringAsFixed(2),
-                                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                                             ),
                                                                                           ],
                                                                                         )
@@ -1857,15 +1857,15 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                           children: [
                                                                                             Text(
                                                                                               rentalOption[i]['currency'] + ' ',
-                                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                                             ),
                                                                                             Text(
                                                                                               rentalOption[i]['fare_amount'].toStringAsFixed(2),
-                                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600, decoration: TextDecoration.lineThrough),
+                                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600, decoration: TextDecoration.lineThrough),
                                                                                             ),
                                                                                             Text(
                                                                                               ' ${rentalOption[i]['discounted_totel'].toStringAsFixed(2)}',
-                                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                                             )
                                                                                           ],
                                                                                         ))
@@ -2054,7 +2054,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           Text(
                                                             userRequestData['pick_address'],
                                                             style:
-                                                            GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                            GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                             maxLines:
                                                             1,
                                                             overflow:
@@ -2068,7 +2068,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           width: media.width * 0.75,
                                                           child: Text(
                                                             addressList.firstWhere((element) => element.id == 'pickup').address,
-                                                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                            style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                             maxLines: 1,
                                                             overflow: TextOverflow.ellipsis,
                                                           ),
@@ -2091,7 +2091,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           Text(
                                                             userRequestData['drop_address'],
                                                             style:
-                                                            GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                            GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                             maxLines:
                                                             1,
                                                             overflow:
@@ -2105,7 +2105,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           width: media.width * 0.75,
                                                           child: Text(
                                                             addressList.firstWhere((element) => element.id == 'drop').address,
-                                                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                            style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                             maxLines: 1,
                                                             overflow: TextOverflow.ellipsis,
                                                           ),
@@ -2163,7 +2163,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         'text_payingvia'],
                                                         style:
                                                         GoogleFonts
-                                                            .roboto(
+                                                            .montserrat(
                                                           fontSize: media
                                                               .width *
                                                               twelve,
@@ -2211,7 +2211,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     .split(',')
                                                                     .toList()[payingVia]
                                                                     .toString(),
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                     color: textColor,
                                                                     fontSize: media.width * fourteen,
                                                                     fontWeight: FontWeight.w600),
@@ -2228,14 +2228,14 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'upi')
                                                                     ? languages[choosenLanguage]['text_payupi']
                                                                     : '',
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                   color: textColor,
                                                                   fontSize: media.width * ten,
                                                                 ),
                                                               )
                                                                   : Text(
                                                                 languages[choosenLanguage]['text_promoaccepted'],
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                   color: const Color(0xff319900),
                                                                   fontSize: media.width * ten,
                                                                 ),
@@ -2307,7 +2307,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         [
                                                         'text_payingvia'],
                                                         style: GoogleFonts
-                                                            .roboto(
+                                                            .montserrat(
                                                           fontSize:
                                                           media.width *
                                                               twelve,
@@ -2346,7 +2346,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                             children: [
                                                               Text(
                                                                 rentalOption[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia].toString(),
-                                                                style: GoogleFonts.roboto(fontSize: media.width * fourteen, fontWeight: FontWeight.w600, color: textColor),
+                                                                style: GoogleFonts.montserrat(fontSize: media.width * fourteen, fontWeight: FontWeight.w600, color: textColor),
                                                               ),
                                                               (rentalOption[choosenVehicle]['has_discount'] == false)
                                                                   ? Text(
@@ -2359,11 +2359,11 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     : (rentalOption[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'upi')
                                                                     ? languages[choosenLanguage]['text_payupi']
                                                                     : '',
-                                                                style: GoogleFonts.roboto(fontSize: media.width * ten, color: textColor),
+                                                                style: GoogleFonts.montserrat(fontSize: media.width * ten, color: textColor),
                                                               )
                                                                   : Text(
                                                                 languages[choosenLanguage]['text_promoaccepted'],
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                   color: const Color(0xff319900),
                                                                   fontSize: media.width * ten,
                                                                 ),
@@ -2579,7 +2579,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   etaDetails[
                                                   _showInfoInt]
                                                   ['name'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize: media
                                                           .width *
                                                           sixteen,
@@ -2600,7 +2600,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   [
                                                   'description'],
                                                   style: GoogleFonts
-                                                      .roboto(
+                                                      .montserrat(
                                                     fontSize: media
                                                         .width *
                                                         fourteen,
@@ -2617,7 +2617,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   choosenLanguage]
                                                   [
                                                   'text_supported_vehicles'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize: media
                                                           .width *
                                                           sixteen,
@@ -2638,7 +2638,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   [
                                                   'supported_vehicles'],
                                                   style: GoogleFonts
-                                                      .roboto(
+                                                      .montserrat(
                                                     fontSize: media
                                                         .width *
                                                         fourteen,
@@ -2664,7 +2664,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         choosenLanguage]
                                                         [
                                                         'text_estimated_amount'],
-                                                        style: GoogleFonts.roboto(
+                                                        style: GoogleFonts.montserrat(
                                                             fontSize:
                                                             media.width *
                                                                 sixteen,
@@ -2686,7 +2686,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           etaDetails[_showInfoInt]['currency'] +
                                                               ' ' +
                                                               etaDetails[_showInfoInt]['total'].toStringAsFixed(2),
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600),
@@ -2700,14 +2700,14 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         Text(
                                                           etaDetails[_showInfoInt]['currency'] +
                                                               ' ',
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600),
                                                         ),
                                                         Text(
                                                           etaDetails[_showInfoInt]['total'].toStringAsFixed(2),
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600,
@@ -2715,7 +2715,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         ),
                                                         Text(
                                                           ' ${etaDetails[_showInfoInt]['discounted_totel'].toStringAsFixed(2)}',
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600),
@@ -2735,7 +2735,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   rentalOption[
                                                   _showInfoInt]
                                                   ['name'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize: media
                                                           .width *
                                                           sixteen,
@@ -2756,7 +2756,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   [
                                                   'description'],
                                                   style: GoogleFonts
-                                                      .roboto(
+                                                      .montserrat(
                                                     fontSize: media
                                                         .width *
                                                         fourteen,
@@ -2773,7 +2773,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   choosenLanguage]
                                                   [
                                                   'text_supported_vehicles'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize: media
                                                           .width *
                                                           sixteen,
@@ -2794,7 +2794,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   [
                                                   'supported_vehicles'],
                                                   style: GoogleFonts
-                                                      .roboto(
+                                                      .montserrat(
                                                     fontSize: media
                                                         .width *
                                                         fourteen,
@@ -2816,7 +2816,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       choosenLanguage]
                                                       [
                                                       'text_estimated_amount'],
-                                                      style: GoogleFonts.roboto(
+                                                      style: GoogleFonts.montserrat(
                                                           fontSize:
                                                           media.width *
                                                               sixteen,
@@ -2838,7 +2838,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           rentalOption[_showInfoInt]['currency'] +
                                                               ' ' +
                                                               rentalOption[_showInfoInt]['fare_amount'].toStringAsFixed(2),
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600),
@@ -2851,14 +2851,14 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       children: [
                                                         Text(
                                                           rentalOption[_showInfoInt]['currency'],
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600),
                                                         ),
                                                         Text(
                                                           ' ${rentalOption[_showInfoInt]['fare_amount'].toStringAsFixed(2)}',
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600,
@@ -2866,7 +2866,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         ),
                                                         Text(
                                                           ' ${rentalOption[_showInfoInt]['discounted_totel'].toStringAsFixed(2)}',
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media.width * fourteen,
                                                               color: textColor,
                                                               fontWeight: FontWeight.w600),
@@ -2936,7 +2936,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                             Text(
                                               languages[choosenLanguage]
                                               ['text_nodriver'],
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize: media.width *
                                                       eighteen,
                                                   fontWeight:
@@ -3015,7 +3015,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   languages[choosenLanguage]
                                                   [
                                                   'text_internal_server_error'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize:
                                                       media.width *
                                                           eighteen,
@@ -3096,7 +3096,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                               child: Text(
                                                   languages[choosenLanguage]
                                                   ['text_no_service'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize:
                                                       media.width *
                                                           eighteen,
@@ -3236,7 +3236,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           choosenLanguage]
                                                           [
                                                           'text_paymentmethod'],
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media
                                                                   .width *
                                                                   twenty,
@@ -3256,7 +3256,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           choosenLanguage]
                                                           [
                                                           'text_choose_paynoworlater'],
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               fontSize: media
                                                                   .width *
                                                                   twelve,
@@ -3329,7 +3329,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                               children: [
                                                                                 Text(
                                                                                   etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[i].toString(),
-                                                                                  style: GoogleFonts.roboto(color: textColor, fontSize: media.width * fourteen, fontWeight: FontWeight.w600),
+                                                                                  style: GoogleFonts.montserrat(color: textColor, fontSize: media.width * fourteen, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                                 Text(
                                                                                   (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[i] == 'cash')
@@ -3341,7 +3341,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                       : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[i] == 'upi')
                                                                                       ? languages[choosenLanguage]['text_payupi']
                                                                                       : '',
-                                                                                  style: GoogleFonts.roboto(
+                                                                                  style: GoogleFonts.montserrat(
                                                                                     color: textColor,
                                                                                     fontSize: media.width * ten,
                                                                                   ),
@@ -3424,7 +3424,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                               children: [
                                                                                 Text(
                                                                                   rentalOption[choosenVehicle]['payment_type'].toString().split(',').toList()[i].toString(),
-                                                                                  style: GoogleFonts.roboto(fontSize: media.width * fourteen, fontWeight: FontWeight.w600, color: textColor),
+                                                                                  style: GoogleFonts.montserrat(fontSize: media.width * fourteen, fontWeight: FontWeight.w600, color: textColor),
                                                                                 ),
                                                                                 Text(
                                                                                   (rentalOption[choosenVehicle]['payment_type'].toString().split(',').toList()[i] == 'cash')
@@ -3436,7 +3436,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                       : (rentalOption[choosenVehicle]['payment_type'].toString().split(',').toList()[i] == 'upi')
                                                                                       ? languages[choosenLanguage]['text_payupi']
                                                                                       : '',
-                                                                                  style: GoogleFonts.roboto(fontSize: media.width * ten, color: textColor),
+                                                                                  style: GoogleFonts.montserrat(fontSize: media.width * ten, color: textColor),
                                                                                 )
                                                                               ],
                                                                             ),
@@ -3524,9 +3524,9 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   decoration: InputDecoration(
                                                                       border: InputBorder.none,
                                                                       hintText: languages[choosenLanguage]['text_enterpromo'],
-                                                                      hintStyle: GoogleFonts.roboto(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.3) : hintColor)),
+                                                                      hintStyle: GoogleFonts.montserrat(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.3) : hintColor)),
                                                                   style:
-                                                                  GoogleFonts.roboto(color: textColor),
+                                                                  GoogleFonts.montserrat(color: textColor),
                                                                 )
                                                                     : (promoStatus ==
                                                                     1)
@@ -3537,8 +3537,8 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     children: [
                                                                       Column(
                                                                         children: [
-                                                                          Text(promoKey.text, style: GoogleFonts.roboto(fontSize: media.width * ten, color: const Color(0xff319900))),
-                                                                          Text(languages[choosenLanguage]['text_promoaccepted'], style: GoogleFonts.roboto(fontSize: media.width * ten, color: const Color(0xff319900))),
+                                                                          Text(promoKey.text, style: GoogleFonts.montserrat(fontSize: media.width * ten, color: const Color(0xff319900))),
+                                                                          Text(languages[choosenLanguage]['text_promoaccepted'], style: GoogleFonts.montserrat(fontSize: media.width * ten, color: const Color(0xff319900))),
                                                                         ],
                                                                       ),
                                                                       InkWell(
@@ -3566,7 +3566,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                             }
                                                                           });
                                                                         },
-                                                                        child: Text(languages[choosenLanguage]['text_remove'], style: GoogleFonts.roboto(fontSize: media.width * twelve, color: const Color(0xff319900))),
+                                                                        child: Text(languages[choosenLanguage]['text_remove'], style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: const Color(0xff319900))),
                                                                       )
                                                                     ],
                                                                   ),
@@ -3577,7 +3577,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   child: Row(
                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                     children: [
-                                                                      Text(promoKey.text, style: GoogleFonts.roboto(fontSize: media.width * twelve, color: const Color(0xffFF0000))),
+                                                                      Text(promoKey.text, style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: const Color(0xffFF0000))),
                                                                       InkWell(
                                                                         onTap: () async {
                                                                           setState(() {
@@ -3602,7 +3602,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                             _isLoading = true;
                                                                           });
                                                                         },
-                                                                        child: Text(languages[choosenLanguage]['text_remove'], style: GoogleFonts.roboto(fontSize: media.width * twelve, color: const Color(0xffFF0000))),
+                                                                        child: Text(languages[choosenLanguage]['text_remove'], style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: const Color(0xffFF0000))),
                                                                       )
                                                                     ],
                                                                   ),
@@ -3629,7 +3629,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                               languages[choosenLanguage]
                                                               [
                                                               'text_promorejected'],
-                                                              style: GoogleFonts.roboto(
+                                                              style: GoogleFonts.montserrat(
                                                                   fontSize: media.width *
                                                                       ten,
                                                                   color:
@@ -3810,7 +3810,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                     languages[choosenLanguage]
                                                     ['text_mins']
                                                     : languages[choosenLanguage]['text_onride'],
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                   fontSize:
                                                   media.width * twelve,
                                                   color: (userRequestData[
@@ -3882,7 +3882,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                           Text(
                                             languages[choosenLanguage]
                                             ['text_findingdriver'],
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize: media.width *
                                                     fourteen,
                                                 color: textColor,
@@ -3939,7 +3939,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                               (timing != null)
                                                   ? Text(
                                                 '${Duration(seconds: timing).toString().substring(3, 7)} mins',
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                     fontSize: media
                                                         .width *
                                                         ten,
@@ -3956,7 +3956,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                           Text(
                                             languages[choosenLanguage]
                                             ['text_finddriverdesc'],
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                               fontSize:
                                               media.width * twelve,
                                               color: textColor,
@@ -4062,7 +4062,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           userRequestData[
                                                           'ride_otp']
                                                               .toString(),
-                                                      style: GoogleFonts.roboto(
+                                                      style: GoogleFonts.montserrat(
                                                           fontSize: media
                                                               .width *
                                                               fourteen,
@@ -4112,7 +4112,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                             'driverDetail']
                                                             ['data']
                                                             ['name'],
-                                                            style: GoogleFonts.roboto(
+                                                            style: GoogleFonts.montserrat(
                                                                 fontSize: media
                                                                     .width *
                                                                     eighteen,
@@ -4133,7 +4133,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                 [
                                                                 'rating']
                                                                     .toString(),
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                     fontSize:
                                                                     media.width *
                                                                         twelve,
@@ -4180,7 +4180,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     userRequestData['driverDetail']['data']
                                                                     [
                                                                     'car_number'],
-                                                                    style: GoogleFonts.roboto(
+                                                                    style: GoogleFonts.montserrat(
                                                                         fontSize: media.width *
                                                                             fourteen,
                                                                         fontWeight:
@@ -4201,7 +4201,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                       userRequestData['driverDetail']['data']
                                                                       [
                                                                       'car_model_name'],
-                                                                  style: GoogleFonts.roboto(
+                                                                  style: GoogleFonts.montserrat(
                                                                       fontSize: media.width *
                                                                           twelve,
                                                                       color:
@@ -4326,7 +4326,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                       (chatList.where((element) => element['from_type'] == 2 && element['seen'] == 0).isEmpty)
                                                                           ? languages[choosenLanguage]['text_pickup_instruction']
                                                                           : languages[choosenLanguage]['text_newmessagereceived'],
-                                                                      style: GoogleFonts.roboto(
+                                                                      style: GoogleFonts.montserrat(
                                                                           fontSize: media.width * twelve,
                                                                           color: (chatList.where((element) => element['from_type'] == 2 && element['seen'] == 0).isEmpty)
                                                                               ? (isDarkTheme == true)
@@ -4345,7 +4345,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   )
                                                                       : Text(
                                                                     chatList.where((element) => element['from_type'] == 2 && element['seen'] == 0).length.toString(),
-                                                                    style: GoogleFonts.roboto(fontSize: media.width * twelve, color: const Color(0xffFF0000)),
+                                                                    style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: const Color(0xffFF0000)),
                                                                   )
                                                                 ],
                                                               ),
@@ -4461,7 +4461,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     width: media.width * 0.75,
                                                                     child: Text(
                                                                       userRequestData['pick_address'],
-                                                                      style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                                      style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                                       maxLines: 1,
                                                                       overflow: TextOverflow.ellipsis,
                                                                     ),
@@ -4471,7 +4471,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     width: media.width * 0.75,
                                                                     child: Text(
                                                                       addressList.firstWhere((element) => element.id == 'pickup').address,
-                                                                      style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                                      style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                                       maxLines: 1,
                                                                       overflow: TextOverflow.ellipsis,
                                                                     ),
@@ -4487,7 +4487,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     width: media.width * 0.75,
                                                                     child: Text(
                                                                       userRequestData['drop_address'],
-                                                                      style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                                      style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                                       maxLines: 1,
                                                                       overflow: TextOverflow.ellipsis,
                                                                     ),
@@ -4497,7 +4497,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     width: media.width * 0.75,
                                                                     child: Text(
                                                                       addressList.firstWhere((element) => element.id == 'drop').address,
-                                                                      style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                                      style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                                       maxLines: 1,
                                                                       overflow: TextOverflow.ellipsis,
                                                                     ),
@@ -4549,7 +4549,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                 width: media.width * 0.75,
                                                                 child: Text(
                                                                   userRequestData['pick_address'],
-                                                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                                  style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                                   maxLines: 1,
                                                                   overflow: TextOverflow.ellipsis,
                                                                 ),
@@ -4559,7 +4559,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                 width: media.width * 0.75,
                                                                 child: Text(
                                                                   addressList.firstWhere((element) => element.id == 'pickup').address,
-                                                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
+                                                                  style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor),
                                                                   maxLines: 1,
                                                                   overflow: TextOverflow.ellipsis,
                                                                 ),
@@ -4626,7 +4626,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   ),
                                                                   Text(
                                                                     languages[choosenLanguage]['text_cancel'],
-                                                                    style: GoogleFonts.roboto(fontSize: media.width * ten, fontWeight: FontWeight.w600, color: textColor),
+                                                                    style: GoogleFonts.montserrat(fontSize: media.width * ten, fontWeight: FontWeight.w600, color: textColor),
                                                                   )
                                                                 ],
                                                               ),
@@ -4684,7 +4684,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           [
                                                           'text_payingvia'],
                                                           style: GoogleFonts
-                                                              .roboto(
+                                                              .montserrat(
                                                             fontSize:
                                                             media.width *
                                                                 twelve,
@@ -4721,7 +4721,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   (userRequestData.isNotEmpty)
                                                                       ? userRequestData['payment_type_string']
                                                                       : etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia].toString(),
-                                                                  style: GoogleFonts.roboto(
+                                                                  style: GoogleFonts.montserrat(
                                                                       fontSize: media.width * fourteen,
                                                                       fontWeight: FontWeight.w600,
                                                                       color: textColor),
@@ -4735,7 +4735,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                       ? languages[choosenLanguage]['text_paycard']
                                                                       : '',
                                                                   style:
-                                                                  GoogleFonts.roboto(fontSize: media.width * ten, color: textColor),
+                                                                  GoogleFonts.montserrat(fontSize: media.width * ten, color: textColor),
                                                                 )
                                                               ],
                                                             ),
@@ -4970,7 +4970,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         choosenLanguage]
                                                         [
                                                         'text_cancelRideReason'],
-                                                        hintStyle: GoogleFonts.roboto(
+                                                        hintStyle: GoogleFonts.montserrat(
                                                             color: textColor
                                                                 .withOpacity(
                                                                 0.4),
@@ -5003,7 +5003,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                     media.width * 0.9,
                                                     child: Text(
                                                         _cancellingError,
-                                                        style: GoogleFonts.roboto(
+                                                        style: GoogleFonts.montserrat(
                                                             fontSize: media
                                                                 .width *
                                                                 twelve,
@@ -5253,7 +5253,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                   [
                                                   'text_confirmridelater'],
                                                   style: GoogleFonts
-                                                      .roboto(
+                                                      .montserrat(
                                                       fontSize: media
                                                           .width *
                                                           fourteen,
@@ -5270,7 +5270,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       choosenDateTime)
                                                       .toString(),
                                                   style:
-                                                  GoogleFonts.roboto(
+                                                  GoogleFonts.montserrat(
                                                       fontSize: media
                                                           .width *
                                                           sixteen,
@@ -5446,7 +5446,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       [
                                                       'text_rideLaterSuccess'],
                                                       style:
-                                                      GoogleFonts.roboto(
+                                                      GoogleFonts.montserrat(
                                                           fontSize: media
                                                               .width *
                                                               fourteen,
@@ -5599,14 +5599,14 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   children: [
                                                                     Text(
                                                                       languages[choosenLanguage]['text_notifyadmin'],
-                                                                      style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                      style: GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor, fontWeight: FontWeight.w600),
                                                                     ),
                                                                     (notifyCompleted == true)
                                                                         ? Container(
                                                                       padding: EdgeInsets.only(top: media.width * 0.01),
                                                                       child: Text(
                                                                         languages[choosenLanguage]['text_notifysuccess'],
-                                                                        style: GoogleFonts.roboto(
+                                                                        style: GoogleFonts.montserrat(
                                                                           fontSize: media.width * twelve,
                                                                           color: const Color(0xff319900),
                                                                         ),
@@ -5647,7 +5647,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                               width: media.width * 0.4,
                                                                               child: Text(
                                                                                 sosData[i]['name'],
-                                                                                style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
                                                                               ),
                                                                             ),
                                                                             SizedBox(
@@ -5655,7 +5655,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                             ),
                                                                             Text(
                                                                               sosData[i]['number'],
-                                                                              style: GoogleFonts.roboto(
+                                                                              style: GoogleFonts.montserrat(
                                                                                 fontSize: media.width * twelve,
                                                                                 color: textColor,
                                                                               ),
@@ -5681,7 +5681,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                             languages[choosenLanguage]
                                                             [
                                                             'text_noDataFound'],
-                                                            style: GoogleFonts.roboto(
+                                                            style: GoogleFonts.montserrat(
                                                                 fontSize: media.width * eighteen,
                                                                 fontWeight: FontWeight.w600,
                                                                 color: textColor),
@@ -5765,7 +5765,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                         choosenLanguage]
                                                         [
                                                         'text_open_loc_settings'],
-                                                        style: GoogleFonts.roboto(
+                                                        style: GoogleFonts.montserrat(
                                                             fontSize:
                                                             media.width *
                                                                 sixteen,
@@ -5792,7 +5792,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                             choosenLanguage]
                                                             [
                                                             'text_open_settings'],
-                                                            style: GoogleFonts.roboto(
+                                                            style: GoogleFonts.montserrat(
                                                                 fontSize: media
                                                                     .width *
                                                                     sixteen,
@@ -5825,7 +5825,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                             languages[
                                                             choosenLanguage]
                                                             ['text_done'],
-                                                            style: GoogleFonts.roboto(
+                                                            style: GoogleFonts.montserrat(
                                                                 fontSize: media
                                                                     .width *
                                                                     sixteen,
@@ -5931,7 +5931,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                               choosenLanguage]
                                                               [
                                                               'text_pickpoint'],
-                                                              style: GoogleFonts.roboto(
+                                                              style: GoogleFonts.montserrat(
                                                                   color: textColor,
                                                                   fontSize:
                                                                   media.width *
@@ -5950,7 +5950,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                               TextOverflow
                                                                   .fade,
                                                               softWrap: false,
-                                                              style: GoogleFonts.roboto(
+                                                              style: GoogleFonts.montserrat(
                                                                   color:
                                                                   textColor,
                                                                   fontSize: media
@@ -5975,7 +5975,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                   .fade,
                                                               softWrap:
                                                               false,
-                                                              style: GoogleFonts.roboto(
+                                                              style: GoogleFonts.montserrat(
                                                                   color:
                                                                   textColor,
                                                                   fontSize:
@@ -6080,7 +6080,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                 choosenLanguage]
                                                                 [
                                                                 'text_droppoint'],
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                     color:
                                                                     textColor,
                                                                     fontSize: media
@@ -6105,7 +6105,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                     .fade,
                                                                 softWrap:
                                                                 false,
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                     color:
                                                                     textColor,
                                                                     fontWeight: FontWeight
@@ -6128,7 +6128,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                 TextOverflow.fade,
                                                                 softWrap:
                                                                 false,
-                                                                style: GoogleFonts.roboto(
+                                                                style: GoogleFonts.montserrat(
                                                                     color: textColor,
                                                                     fontWeight: FontWeight.w600,
                                                                     fontSize: media.width * twelve),
@@ -6198,7 +6198,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                             .center,
                                                         child: Text(
                                                           "${etaDetails[0]['distance'].toString()} ${etaDetails[0]['unit_in_words'].toString()} ",
-                                                          style: GoogleFonts.roboto(
+                                                          style: GoogleFonts.montserrat(
                                                               color:
                                                               textColor,
                                                               fontSize: media
@@ -6214,7 +6214,206 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                       : Container(),
 
                                   // Bottom sheet
+                                  DraggableScrollableSheet(
+                                      initialChildSize: 0.5,
+                                      minChildSize: 0.5,
+                                      builder: (BuildContext context,ScrollController scrollcontainer){
+                                        return Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(24.0),
+                                                topRight: Radius.circular(24.0),
+                                              )
+                                          ),
+                                          child: ListView.builder(
+                                              controller: scrollcontainer,
+                                              physics: ClampingScrollPhysics(),
+                                              itemCount: cars.length,
+                                              itemBuilder: (BuildContext context,int index){
+                                                final car =cars[index];
 
+                                                if(index==0){
+                                                  return Padding(
+                                                    padding: EdgeInsets. all (8.0),
+                                                    child: Column (
+                                                        children: [
+                                                          Container(
+                                                            width:50,
+                                                            height: 4,
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.circular((64)),),
+
+                                                          ),
+
+                                                          SizedBox(
+                                                            height: 8,
+                                                          ),
+
+                                                          Text('Select Your Captain',style: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 24,
+                                                            fontWeight: FontWeight.bold,
+
+                                                          ),),
+
+                                                          Padding(
+                                                            padding: const EdgeInsets.only(top:8),
+                                                            child: Row(
+                                                              mainAxisAlignment: MainAxisAlignment.center,
+
+                                                              children: [
+                                                                //search bar
+                                                                SizedBox(
+                                                                  width:296,
+                                                                  height: 56,
+                                                                  child: TextField(
+                                                                    decoration: InputDecoration(
+                                                                      prefixIcon: Icon(Icons.search),
+                                                                      fillColor: Colors.black.withOpacity(.8),
+                                                                      border: OutlineInputBorder(
+                                                                        borderRadius: BorderRadius.circular(24),
+                                                                      ),
+                                                                      // labelText: 'Filled',
+                                                                      hintText: 'Search By Name, Car Number, driver id..',
+                                                                      hintStyle: TextStyle(
+                                                                          color: Colors.white24
+                                                                      ),
+                                                                      filled: true,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                SizedBox(width:8),
+
+                                                                Container(
+                                                                  height: 40,
+                                                                  width: 40,
+                                                                  decoration: BoxDecoration(
+                                                                      shape: BoxShape.circle,
+                                                                      color:Colors.white.withOpacity(.1)
+                                                                  ),
+                                                                  child:Icon(Icons.downloading_sharp,
+                                                                    color: Colors.white60,),
+                                                                ),
+                                                                SizedBox(width:8),
+
+                                                                //Referral Icon
+                                                                Container(
+                                                                  height: 40,
+                                                                  width: 40,
+                                                                  decoration: BoxDecoration(
+                                                                    shape: BoxShape.circle,
+                                                                    color:Colors.white.withOpacity(.1),
+                                                                  ),
+                                                                  child:Icon(Icons.receipt_long_rounded,
+                                                                      color: Colors.white60),
+                                                                ),
+                                                              ],),
+                                                          ),
+                                                        ]
+                                                    ),);
+                                                }
+
+                                                return Padding(
+                                                  padding: const EdgeInsets.only(left: 8.0,right: 8,top:16),
+
+                                                  //Captain Detail card
+                                                  child: Container(
+
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.white12,
+                                                      borderRadius: BorderRadius.circular(16),
+                                                    ),
+                                                    child: Padding(
+                                                      padding: const EdgeInsets.all(16.0),
+                                                      child: Column(
+                                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                                        children: [
+
+                                                          Row(
+                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                            children: [
+                                                              Text(car['name'],style: TextStyle(color: Colors.white60,fontSize: 24,fontWeight: FontWeight.bold),),
+                                                              Text('12KM',style: TextStyle(color: Colors.white60),),
+                                                            ],
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                            children: [
+                                                              Text('Car Model',style: TextStyle(color: Colors.white60,fontSize: 16),),
+                                                              Text('12Min',style: TextStyle(color: Colors.white60),),
+                                                            ],
+                                                          ),
+
+                                                          SizedBox(
+                                                            height: 8,
+                                                          ),
+
+                                                          Icon(Icons.star,color: Colors.white60),
+
+                                                          SizedBox(
+                                                            height: 16,
+                                                          ),
+
+                                                          Row(
+                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                            children: [
+
+                                                              //Primary Button
+                                                              SizedBox(
+                                                                height:56,
+                                                                width: 160,
+                                                                child: ElevatedButton(
+                                                                  child: Text('Book Ride',style: TextStyle(
+                                                                    color: Colors.white,
+
+                                                                  ),),
+                                                                  onPressed: () {},
+
+                                                                  style: ElevatedButton.styleFrom(
+                                                                      backgroundColor: Colors.black,
+                                                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                      textStyle: TextStyle(
+                                                                        fontSize: 15,
+                                                                        fontWeight: FontWeight.bold,
+                                                                        color: Colors.white,
+                                                                      )),
+                                                                ),
+                                                              ),
+
+                                                              //Secondary Button
+                                                              SizedBox(
+                                                                height:56,
+                                                                child: OutlinedButton(
+                                                                  child: Text('View Details',style: TextStyle(
+                                                                      color: Colors.white
+                                                                  ),),
+                                                                  onPressed: () {},
+
+                                                                  style: ElevatedButton.styleFrom(
+                                                                    // backgroundColor: Colors.white.withOpacity(.1),
+                                                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                      textStyle: TextStyle(
+                                                                        fontSize: 15,
+                                                                        fontWeight: FontWeight.bold,
+                                                                        // color: Colors.white,
+                                                                      )),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+
+
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                );
+                                              }
+                                          ),
+                                        );
+                                      }),
 
                                 ],
                               );
@@ -6323,3 +6522,4 @@ class _BookingConfirmationState extends State<BookingConfirmation>
     animationController.forward();
   }
 }
+
