@@ -1488,7 +1488,7 @@ class _MapsState extends State<Maps>
                                                                               color: favAddress.where((element) => element['pick_address'] == addressList.firstWhere((element) => element.id == 'pickup').address).isEmpty
                                                                                   ? (isDarkTheme == true)
                                                                                   ? textColor.withOpacity(0.4)
-                                                                                  : Colors.black
+                                                                                  : Colors.white24
                                                                                   : buttonColor,
                                                                             ),
                                                                           )
@@ -1935,6 +1935,32 @@ class _MapsState extends State<Maps>
                                                                                   text: languages['en']['text_ridewithout_destination']),
                                                                           ],
                                                                         ))),
+                                                            // Proceed button
+
+                                                            Padding(
+                                                              padding: const EdgeInsets.only(bottom:24.0),
+                                                              child: SizedBox(
+                                                                width:MediaQuery.of(context).size.width*.5,
+                                                                height:MediaQuery.of(context).size.height*.06,
+                                                                child: ElevatedButton(
+                                                                  child: Text('Proceed',style:GoogleFonts.montserrat(
+                                                                    color: Colors.black,
+
+                                                                  ),),
+
+
+                                                                  style: ElevatedButton.styleFrom(
+                                                                      backgroundColor: Colors.white,
+                                                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                      textStyle: GoogleFonts.montserrat(
+                                                                        fontSize: 15,
+                                                                        fontWeight: FontWeight.bold,
+                                                                        color: Colors.white,
+                                                                      )),
+                                                                  onPressed: () {},
+                                                                ),
+                                                              ),
+                                                            ),
                                                           ],
                                                         ),
                                                       ),
