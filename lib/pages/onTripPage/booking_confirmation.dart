@@ -26,15 +26,6 @@ import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart' as perm;
 import 'package:geolocator/geolocator.dart' as geolocs;
 
-
-List cars=[
-  {'name': 'Roshan','price':200},
-  {'name': 'Rishi','price':200},
-  {'name': 'Abhishek','price':200},
-  {'name': 'Abhijeet','price':200},
-
-];
-
 // ignore: must_be_immutable
 class BookingConfirmation extends StatefulWidget {
   // const BookingConfirmation({Key? key}) : super(key: key);
@@ -46,6 +37,8 @@ class BookingConfirmation extends StatefulWidget {
   @override
   State<BookingConfirmation> createState() => _BookingConfirmationState();
 }
+
+bool showBookingContainer = false;
 
 bool serviceNotAvailable = false;
 String promoCode = '';
@@ -1061,6 +1054,8 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                 alignment: Alignment.center,
                                 children: [
 
+
+
                                   SizedBox(
                                       height: media.height * 1,
                                       width: media.width * 1,
@@ -1125,107 +1120,33 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       const Maps()),
                                                       (route) => false);
                                             },
-                                            // child: Container(
-                                            //   height: media.width * 0.1,
-                                            //   width: media.width * 0.1,
-                                            //   decoration: BoxDecoration(
-                                            //       shape: BoxShape.circle,
-                                            //       boxShadow: [
-                                            //         BoxShadow(
-                                            //             color: Colors
-                                            //                 .black
-                                            //                 .withOpacity(
-                                            //                 0.2),
-                                            //             spreadRadius: 2,
-                                            //             blurRadius: 2)
-                                            //       ],
-                                            //       color: page),
-                                            //   alignment: Alignment.center,
-                                            //   child: Icon(
-                                            //     Icons.arrow_back,
-                                            //     color: textColor,
-                                            //   ),
-                                            // ),
+                                            child: Container(
+                                              height: media.width * 0.1,
+                                              width: media.width * 0.1,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                        color: Colors
+                                                            .black
+                                                            .withOpacity(
+                                                            0.2),
+                                                        spreadRadius: 2,
+                                                        blurRadius: 2)
+                                                  ],
+                                                  color: page),
+                                              alignment: Alignment.center,
+                                              child: Icon(
+                                                Icons.arrow_back,
+                                                color: textColor,
+                                              ),
+                                            ),
                                           ),
                                         ],
                                       ),
                                     ),
                                   )
                                       : Container(),
-                                  Positioned(
-
-                                    top: media.width *
-                                        0.16,
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Container(
-                                        height: 188,
-                                        width: media.width*.9,
-
-                                        decoration: BoxDecoration(
-                                          color:Colors.black,
-                                          borderRadius: BorderRadius.circular(15),
-                                        ),
-                                        child:Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              SizedBox(width:8),
-                                              Padding(
-                                                padding: const EdgeInsets.all(4.0),
-                                                child: Text('From:',style:TextStyle(color: Colors.white)),
-                                              ),
-
-                                              SizedBox(
-                                                //width:296,
-                                                height: 56,
-                                                child: TextField(
-                                                  decoration: InputDecoration(
-                                                    prefixIcon: Icon(Icons.search),
-                                                    fillColor: Colors.black.withOpacity(.8),
-                                                    border: OutlineInputBorder(
-                                                      borderRadius: BorderRadius.circular(24),
-                                                    ),
-                                                    // labelText: 'Filled',
-                                                    hintText: 'Pickup Location..',
-                                                    hintStyle: TextStyle(
-                                                        color: Colors.white70
-                                                    ),
-                                                    filled: true,
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(width:8),
-                                              Padding(
-                                                padding: const EdgeInsets.all(4.0),
-                                                child: Text('To:',style:TextStyle(color: Colors.white)),
-                                              ),
-                                              SizedBox(
-                                                //width:296,
-                                                height: 56,
-                                                child: TextField(
-                                                  decoration: InputDecoration(
-                                                    prefixIcon: Icon(Icons.search),
-                                                    fillColor: Colors.black.withOpacity(.8),
-                                                    border: OutlineInputBorder(
-                                                      borderRadius: BorderRadius.circular(24),
-                                                    ),
-                                                    // labelText: 'Filled',
-                                                    hintText: 'Drop Location..',
-                                                    hintStyle: TextStyle(
-                                                        color: Colors.white70
-                                                    ),
-                                                    filled: true,
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(width:8),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),),
                                   Positioned(
                                     bottom: (widget.type != 1)
                                         ? media.width * 1.1
@@ -1423,28 +1344,30 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                               ),
                                               SizedBox(
                                                 width: media.width * 0.9,
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .start,
-                                                  children: [
-                                                    Text(
-                                                      languages[
-                                                      choosenLanguage]
-                                                      [
-                                                      'text_availablerides'],
-                                                      style: GoogleFonts.montserrat(
-                                                          fontSize:
-                                                          media.width *
-                                                              fourteen,
-                                                          color: textColor),
-                                                    ),
-                                                  ],
+                                                child: Padding(
+                                                  padding: const EdgeInsets.only(bottom: 8.0),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .start,
+                                                    children: [
+                                                      Text(
+                                                        languages[
+                                                        choosenLanguage]
+                                                        [
+                                                        'text_availablerides'],
+                                                        style: GoogleFonts.montserrat(
+                                                            fontSize:
+                                                            media.width *
+                                                                fourteen,
+                                                            color: Colors.white.withOpacity(.5)),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
-                                              (etaDetails.isNotEmpty &&
-                                                  widget.type != 1)
-                                                  ? Expanded(
+                                              if (etaDetails.isNotEmpty &&
+                                                  widget.type != 1) Expanded(
                                                 child: SizedBox(
                                                   width: media.width *
                                                       0.9,
@@ -1510,128 +1433,397 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                       } else {
                                                                         minutes[etaDetails[i]['type_id']] = '';
                                                                       }
-
+                                                                      //Cab daetail -->
                                                                       return InkWell(
                                                                         onTap: () {
                                                                           setState(() {
                                                                             choosenVehicle = i;
                                                                           });
                                                                         },
+
+
                                                                         child: Container(
                                                                           padding: EdgeInsets.all(media.width * 0.03),
                                                                           decoration: BoxDecoration(
                                                                             borderRadius: BorderRadius.circular(12),
-                                                                            border: Border.all(color:Colors.white),
                                                                             color: (choosenVehicle != i)
                                                                                 ? Colors.white
                                                                                 : (isDarkTheme == true)
                                                                                 ? textColor.withOpacity(0.2)
-                                                                                : Colors.black12,
+                                                                                : Colors.white.withOpacity(.1),
                                                                           ),
-                                                                          child: Row(
+                                                                          child: Column(
+
                                                                             children: [
-                                                                              Column(
-                                                                                children: [
-                                                                                  (etaDetails[i]['icon'] != null)
-                                                                                      ? SizedBox(
-                                                                                      width: media.width * 0.1,
-                                                                                      child: Image.network(
-                                                                                        etaDetails[i]['icon'],
-                                                                                        fit: BoxFit.contain,
-                                                                                      ))
-                                                                                      : Container(),
-                                                                                  SizedBox(height: media.width * 0.01),
-                                                                                  (minutes[etaDetails[i]['type_id']] != '')
-                                                                                      ? Text(
-                                                                                    minutes[etaDetails[i]['type_id']].toString(),
-                                                                                    style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
-                                                                                  )
-                                                                                      : Text(
-                                                                                    '- -',
-                                                                                    style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
-                                                                                  )
-                                                                                ],
-                                                                              ),
-                                                                              SizedBox(
-                                                                                width: media.width * 0.05,
-                                                                              ),
-                                                                              Column(
+                                                                              Row(
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                mainAxisAlignment: MainAxisAlignment.start,
                                                                                 children: [
-                                                                                  Text(etaDetails[i]['name'], style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600)),
-                                                                                  Row(
-                                                                                    children: [
-                                                                                      SizedBox(
-                                                                                        width: media.width * 0.3,
-                                                                                        child: Text(
-                                                                                          etaDetails[i]['short_description'],
-                                                                                          style: GoogleFonts.montserrat(
-                                                                                            fontSize: media.width * twelve,
-                                                                                            color: textColor,
+
+                                                                                  // Car
+                                                                                  CircleAvatar(
+                                                                                   radius: 24,
+                                                                                   backgroundColor: Colors.white.withOpacity(0),
+                                                                                   child: Image.asset('assets/images/car.png'),
+                                                                                 ),
+
+                                                                                          SizedBox(width: 16,),
+
+                                                                                          // Column(
+                                                                                          //   children: [
+                                                                                          //     (etaDetails[i]['icon'] != null)
+                                                                                          //         ? SizedBox(
+                                                                                          //         width: media.width * 0.1,
+                                                                                          //         child: Image.network(
+                                                                                          //           etaDetails[i]['icon'],
+                                                                                          //           fit: BoxFit.contain,
+                                                                                          //         ))
+                                                                                          //         : Container(),
+                                                                                          //     SizedBox(height: media.width * 0.01),
+                                                                                          //     (minutes[etaDetails[i]['type_id']] != '')
+                                                                                          //         ? Text(
+                                                                                          //       minutes[etaDetails[i]['type_id']].toString(),
+                                                                                          //       style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
+                                                                                          //     )
+                                                                                          //         : Text(
+                                                                                          //       '- -',
+                                                                                          //       style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4)),
+                                                                                          //     )
+                                                                                          //   ],
+                                                                                          // ),
+                                                                                          SizedBox(
+                                                                                            width: media.width * 0.02,
                                                                                           ),
-                                                                                          maxLines: 1,
-                                                                                        ),
-                                                                                      ),
-                                                                                      SizedBox(width: media.width * 0.01),
-                                                                                      InkWell(
-                                                                                          onTap: () {
-                                                                                            setState(() {
-                                                                                              _showInfoInt = i;
-                                                                                              _showInfo = true;
-                                                                                            });
-                                                                                          },
-                                                                                          child: Icon(
-                                                                                            Icons.info_outline,
-                                                                                            size: media.width * twelve,
-                                                                                            color: textColor,
-                                                                                          )),
+                                                                                          Column(
+                                                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                            children: [
+                                                                                              Text(etaDetails[i]['name'], style: GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor, fontWeight: FontWeight.w700)),
+                                                                                              Row(
+                                                                                                children: [
+                                                                                                  SizedBox(
+                                                                                                    width: media.width * 0.3,
+                                                                                                    child: Text(
+                                                                                                      etaDetails[i]['short_description'],
+                                                                                                      style: GoogleFonts.montserrat(
+                                                                                                        fontSize: media.width * twelve,
+                                                                                                        color: textColor,
+                                                                                                      ),
+                                                                                                      maxLines: 1,
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                  //SizedBox(width: media.width * 0.01),
+                                                                                                  // InkWell(
+                                                                                                  //     onTap: () {
+                                                                                                  //       setState(() {
+                                                                                                  //         _showInfoInt = i;
+                                                                                                  //         _showInfo = true;
+                                                                                                  //       });
+                                                                                                  //     },
+                                                                                                  //     child: Icon(
+                                                                                                  //       Icons.info_outline,
+                                                                                                  //       size: media.width * twelve,
+                                                                                                  //       color: textColor,
+                                                                                                  //     )),
+                                                                                                ],
+                                                                                              ),
+                                                                                              SizedBox(
+                                                                                                height: 4,
+                                                                                              ),
+                                                                                              //Review star
+                                                                                              Row(
+                                                                                                children: [
+                                                                                                  Icon(Icons.star_rounded,color: Colors.white24,),
+                                                                                                  Icon(Icons.star_rounded,color: Colors.white24,),
+                                                                                                  Icon(Icons.star_rounded,color: Colors.white24,),
+                                                                                                  Icon(Icons.star_rounded,color: Colors.white24,),
+                                                                                                  Icon(Icons.star_half_rounded,color: Colors.white24,),
+                                                                                                ],
+                                                                                              ),
+
+
+                                                                                            ],
+                                                                                          ),
+
+                                                                                  SizedBox(
+                                                                                    width: 96,
+                                                                                  ),
+
+                                                                                  // Price
+
+                                                                                  Column(
+                                                                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                                                                    mainAxisAlignment: MainAxisAlignment.end,
+                                                                                    children: [
+                                                                                      Text('₹ 220',style:GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor.withOpacity(0.4),fontWeight: FontWeight.bold),),
+                                                                                      //SizedBox(height: 2,),
+                                                                                      Text('12Km',style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4),fontWeight: FontWeight.w500)),
                                                                                     ],
                                                                                   ),
+
                                                                                 ],
                                                                               ),
-                                                                              Expanded(
-                                                                                  child: (etaDetails[i]['has_discount'] != true)
-                                                                                      ? Row(
-                                                                                    mainAxisAlignment: MainAxisAlignment.end,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        etaDetails[i]['currency'] + ' ' + etaDetails[i]['total'].toStringAsFixed(2),
-                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+
+
+                                                                                //Book Ride
+                                                                              Padding(
+                                                                                padding: const EdgeInsets.only(top:16.0),
+                                                                                child: Row(
+                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                  children: [
+
+                                                                                    //Primary Button
+                                                                                    SizedBox(
+                                                                                      height:56,
+                                                                                      width: 168,
+                                                                                      child: ElevatedButton(
+                                                                                        child: Text('Book Ride',style: TextStyle(
+                                                                                          color: Colors.white,
+
+                                                                                        ),),
+                                                                                        onPressed: () async {
+                                                                                          setState(() {
+                                                                                            _isLoading = true;
+                                                                                          });
+                                                                                          dynamic result;
+                                                                                          if (choosenVehicle !=
+                                                                                              null) {
+                                                                                            if (widget.type !=
+                                                                                                1) {
+                                                                                              if (etaDetails[
+                                                                                              choosenVehicle]
+                                                                                              [
+                                                                                              'has_discount'] ==
+                                                                                                  false) {
+                                                                                                result =
+                                                                                                await createRequest();
+                                                                                                if (result ==
+                                                                                                    'logout') {
+                                                                                                  navigateLogout();
+                                                                                                }
+                                                                                              } else {
+                                                                                                result =
+                                                                                                await createRequestWithPromo();
+                                                                                                if (result ==
+                                                                                                    'logout') {
+                                                                                                  navigateLogout();
+                                                                                                }
+                                                                                              }
+                                                                                            } else {
+                                                                                              if (rentalOption[
+                                                                                              choosenVehicle]
+                                                                                              [
+                                                                                              'has_discount'] ==
+                                                                                                  false) {
+                                                                                                result =
+                                                                                                await createRentalRequest();
+                                                                                                if (result ==
+                                                                                                    'logout') {
+                                                                                                  navigateLogout();
+                                                                                                }
+                                                                                              } else {
+                                                                                                result =
+                                                                                                await createRentalRequestWithPromo();
+                                                                                                if (result ==
+                                                                                                    'logout') {
+                                                                                                  navigateLogout();
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                          if (result ==
+                                                                                              'success') {
+                                                                                            timer();
+                                                                                          }
+                                                                                          setState(() {
+                                                                                            _isLoading =
+                                                                                            false;
+                                                                                          });
+                                                                                        },
+
+                                                                                        style: ElevatedButton.styleFrom(
+                                                                                            backgroundColor: Colors.black,
+                                                                                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                                            textStyle: TextStyle(
+                                                                                              fontSize: 15,
+                                                                                              fontWeight: FontWeight.bold,
+                                                                                              color: Colors.white,
+                                                                                            )),
                                                                                       ),
-                                                                                    ],
-                                                                                  )
-                                                                                      : Row(
-                                                                                    mainAxisAlignment: MainAxisAlignment.end,
-                                                                                    children: [
-                                                                                      Text(
-                                                                                        etaDetails[i]['currency'] + ' ',
-                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
+                                                                                    ),
+
+                                                                                    SizedBox(
+                                                                                      width: 8,
+                                                                                    ),
+                                                                                    //Secondary Button
+                                                                                    SizedBox(
+                                                                                      height:56,
+                                                                                      width: 168,
+                                                                                      child: OutlinedButton(
+                                                                                        child: Text('View Details',style: TextStyle(
+                                                                                            color: Colors.white
+                                                                                        ),),
+                                                                                        onPressed: () {
+                                                                                          setState(() {
+                                                                                            _showInfoInt = i;
+                                                                                            _showInfo = true;
+                                                                                          });
+                                                                                        },
+
+
+                                                                                        style: ElevatedButton.styleFrom(
+                                                                                          // backgroundColor: Colors.white.withOpacity(.1),
+                                                                                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                                            textStyle: TextStyle(
+                                                                                              fontSize: 15,
+                                                                                              fontWeight: FontWeight.bold,
+                                                                                              // color: Colors.white,
+                                                                                            )),
                                                                                       ),
-                                                                                      Text(
-                                                                                        etaDetails[i]['total'].toStringAsFixed(2),
-                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600, decoration: TextDecoration.lineThrough),
-                                                                                      ),
-                                                                                      Text(
-                                                                                        ' ${etaDetails[i]['discounted_totel'].toStringAsFixed(2)}',
-                                                                                        style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor, fontWeight: FontWeight.w600),
-                                                                                      )
-                                                                                    ],
-                                                                                  ))
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
                                                                             ],
-                                                                          ),
-                                                                        ),
-                                                                      );
+                                                                          )) );
+
                                                                     }));
                                                           })
                                                               .values
                                                               .toList(),
+
+
+
                                                         ),
+
+                                                        SizedBox(height:24),
+
+                                                        //Pro Rider
+                                                        Container(
+                                                          height:168,
+                                                          width: MediaQuery.of(context).size.width,
+                                                          //padding: EdgeInsets.all(media.width * 0.03),
+                                                          decoration: BoxDecoration(
+                                                            borderRadius: BorderRadius.circular(12),
+                                                            color: Colors.white.withOpacity(.15),
+
+                                                          ),
+                                                          child:
+                                                          Padding(
+                                                            padding: const EdgeInsets.all(16.0),
+                                                            child: Column(
+                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                              mainAxisAlignment: MainAxisAlignment.start,
+                                                              children: [
+
+                                                                CircleAvatar(
+                                                                  radius: 8,
+                                                                  backgroundColor: Colors.transparent,
+                                                                  child:Image.asset('assets/images/crown.png'),
+                                                                ),
+                                                               // SizedBox(height:8),
+                                                                Row(
+
+                                                                    children: [
+
+                                                                      Column(
+                                                                        children: [
+                                                                          Row(
+                                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                                            children: [
+                                                                              Column(
+                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                children: [
+                                                                                  Text('Pro rider',
+                                                                                      style:GoogleFonts.montserrat(
+                                                                                    color:Colors.white,
+                                                                                        fontSize: media.width * sixteen,
+                                                                                    fontWeight: FontWeight.bold,
+                                                                                  )),
+
+                                                                                  Text('1-2 People',
+                                                                                      style:GoogleFonts.montserrat(
+                                                                                        color:Colors.white,
+                                                                                        fontSize: media.width * twelve,
+                                                                                        //fontWeight: FontWeight.bold,
+                                                                                      )),
+                                                                                ],
+                                                                              ),
+                                                                              SizedBox(width:196),
+                                                                              //Price of pro rider
+                                                                              Column(
+                                                                                crossAxisAlignment: CrossAxisAlignment.end,
+                                                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                                                children: [
+                                                                                  Text('₹ 220',style:GoogleFonts.montserrat(fontSize: media.width * sixteen, color: textColor.withOpacity(0.4),fontWeight: FontWeight.bold),),
+                                                                                  //SizedBox(height: 2,),
+                                                                                  Text('12Km',style: GoogleFonts.montserrat(fontSize: media.width * twelve, color: textColor.withOpacity(0.4),fontWeight: FontWeight.w500)),
+                                                                                ],
+                                                                              ),
+                                                                            ],
+                                                                          ),
+
+                                                                          //Book Ride
+                                                                          Padding(
+                                                                            padding: const EdgeInsets.only(top:16.0),
+                                                                            child: Row(
+                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                              children: [
+
+                                                                                //Primary Button
+                                                                                SizedBox(
+                                                                                  height:56,
+                                                                                  width: MediaQuery.of(context).size.width*.81,
+                                                                                  child: ElevatedButton(
+                                                                                    child: Text('Book Ride',
+                                                                                      style: GoogleFonts.montserrat(
+                                                                                      color: Colors.white,
+
+                                                                                    ),),
+                                                                                    onPressed: () {
+                                                                                      setState(() {
+                                                                                        showBookingContainer = true;
+                                                                                      });
+                                                                                      Navigator.push(
+                                                                                          context,
+                                                                                          MaterialPageRoute(
+                                                                                              builder: (context) => BookingConfirmation(
+                                                                                                type: 1,
+                                                                                              )));
+                                                                                    },
+
+                                                                                    style: ElevatedButton.styleFrom(
+                                                                                        backgroundColor: Colors.black,
+                                                                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
+                                                                                        textStyle: TextStyle(
+                                                                                          fontSize: 15,
+                                                                                          fontWeight: FontWeight.bold,
+                                                                                          color: Colors.white,
+                                                                                        )),
+                                                                                  ),
+                                                                                ),
+
+
+                                                                              ],
+                                                                            ),
+                                                                          ),
+
+                                                                        ],
+                                                                      ),
+
+                                                                      // Price
+
+                                                                    ] ),
+                                                              ],
+                                                            ),
+                                                          ),
+
+                                                        )
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              )
-                                                  : (etaDetails
+                                              ) else (etaDetails
                                                   .isNotEmpty &&
                                                   widget.type == 1)
                                                   ? Expanded(
@@ -2111,159 +2303,217 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                           ),
                                                         )
                                                             : Container(),
+
                                                       ],
                                                     )
                                                   ],
                                                 ),
                                               )
                                                   : Container(),
-                                              (choosenVehicle != null &&
-                                                  widget.type != 1)
-                                                  ? InkWell(
-                                                onTap: () {
-                                                  setState(() {
-                                                    _choosePayment =
-                                                    true;
-                                                  });
-                                                },
-                                                child: Container(
-                                                  padding: EdgeInsets
-                                                      .all(media
-                                                      .width *
-                                                      0.02),
-                                                  height:
-                                                  media.width *
-                                                      0.2,
-                                                  width: media.width *
-                                                      0.9,
-                                                  decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                          color: (isDarkTheme ==
-                                                              true)
-                                                              ? textColor.withOpacity(
-                                                              0.4)
-                                                              : borderLines,
-                                                          width: 1.2),
-                                                      borderRadius:
-                                                      BorderRadius
-                                                          .circular(
-                                                          12)),
-                                                  child: Column(
-                                                    mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                    crossAxisAlignment:
-                                                    CrossAxisAlignment
-                                                        .start,
+                                              if (choosenVehicle != null &&
+                                                  widget.type != 1) Row(
+                                                // Payment
                                                     children: [
-                                                      Text(
-                                                        languages[
-                                                        choosenLanguage]
-                                                        [
-                                                        'text_payingvia'],
-                                                        style:
-                                                        GoogleFonts
-                                                            .montserrat(
-                                                          fontSize: media
-                                                              .width *
-                                                              twelve,
-                                                          color: const Color(
-                                                              0xff666666),
+                                                      InkWell(
+                                                        onTap: () {
+                                                      setState(() {
+                                                        _choosePayment =
+                                                        true;
+                                                      });
+                                                      },
+                                                        child: Container(
+                                                      padding: EdgeInsets
+                                                          .all(media
+                                                          .width *
+                                                          0.02),
+                                                      height:
+                                                      media.width *
+                                                          0.2,
+                                                      width: media.width *
+                                                          0.43,
+                                                      decoration: BoxDecoration(
+                                                          color: Colors.white.withOpacity(.1),
+                                                          borderRadius:
+                                                          BorderRadius
+                                                              .circular(
+                                                              12)),
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.only(left:10.0),
+                                                        child: Column(
+                                                          mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceEvenly,
+                                                          crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                          children: [
+                                                            //Paying via
+                                                            Text(
+                                                              languages[
+                                                              choosenLanguage]
+                                                              [
+                                                              'text_payingvia'],
+                                                              style:
+                                                              GoogleFonts
+                                                                  .montserrat(
+                                                                fontSize: media
+                                                                    .width *
+                                                                    twelve,
+                                                                color: const Color(
+                                                                    0xff666666),
+                                                              ),
+                                                            ),
+                                                            Row(
+                                                              children: [
+                                                                SizedBox(
+                                                                  width: media
+                                                                      .width *
+                                                                      0.06,
+                                                                  child: (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] ==
+                                                                      'cash')
+                                                                      ? Image
+                                                                      .asset(
+                                                                    'assets/images/cash.png',
+                                                                    fit: BoxFit.contain,
+                                                                  )
+                                                                      : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'wallet')
+                                                                      ? Image.asset('assets/images/wallet.png', fit: BoxFit.contain, color: textColor)
+                                                                      : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'card')
+                                                                      ? Image.asset('assets/images/card.png', fit: BoxFit.contain, color: textColor)
+                                                                      : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'upi')
+                                                                      ? Image.asset(
+                                                                    'assets/images/upi.png',
+                                                                    fit: BoxFit.contain,
+                                                                  )
+                                                                      : Container(),
+                                                                ),
+                                                                SizedBox(
+                                                                  width: media
+                                                                      .width *
+                                                                      0.05,
+                                                                ),
+                                                                Column(
+                                                                  crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                                  children: [
+                                                                    //Cash Option
+                                                                    Text(
+                                                                      etaDetails[choosenVehicle]['payment_type']
+                                                                          .toString()
+                                                                          .split(',')
+                                                                          .toList()[payingVia]
+                                                                          .toString(),
+                                                                      style: GoogleFonts.montserrat(
+                                                                          color: textColor,
+                                                                          fontSize: media.width * fourteen,
+                                                                          fontWeight: FontWeight.w600),
+                                                                    ),
+                                                                    // (etaDetails[choosenVehicle]['has_discount'] ==
+                                                                    //     false)
+                                                                    //     ? Text(
+                                                                    //   (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'cash')
+                                                                    //       ? languages[choosenLanguage]['text_paycash']
+                                                                    //       : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'wallet')
+                                                                    //       ? languages[choosenLanguage]['text_paywallet']
+                                                                    //       : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'card')
+                                                                    //       ? languages[choosenLanguage]['text_paycard']
+                                                                    //       : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'upi')
+                                                                    //       ? languages[choosenLanguage]['text_payupi']
+                                                                    //       : '',
+                                                                    //   style: GoogleFonts.montserrat(
+                                                                    //     color: textColor,
+                                                                    //     fontSize: media.width * ten,
+                                                                    //   ),
+                                                                    // )
+                                                                    //     : Text(
+                                                                    //   languages[choosenLanguage]['text_promoaccepted'],
+                                                                    //   style: GoogleFonts.montserrat(
+                                                                    //     color: const Color(0xff319900),
+                                                                    //     fontSize: media.width * ten,
+                                                                    //   ),
+                                                                    // )
+                                                                  ],
+                                                                ),
+
+
+
+                                                              ],
+                                                            )
+                                                          ],
                                                         ),
                                                       ),
-                                                      Row(
-                                                        children: [
-                                                          SizedBox(
-                                                            width: media
-                                                                .width *
-                                                                0.06,
-                                                            child: (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] ==
-                                                                'cash')
-                                                                ? Image
-                                                                .asset(
-                                                              'assets/images/cash.png',
-                                                              fit: BoxFit.contain,
-                                                            )
-                                                                : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'wallet')
-                                                                ? Image.asset('assets/images/wallet.png', fit: BoxFit.contain, color: textColor)
-                                                                : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'card')
-                                                                ? Image.asset('assets/images/card.png', fit: BoxFit.contain, color: textColor)
-                                                                : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'upi')
-                                                                ? Image.asset(
-                                                              'assets/images/upi.png',
-                                                              fit: BoxFit.contain,
-                                                            )
-                                                                : Container(),
-                                                          ),
-                                                          SizedBox(
-                                                            width: media
-                                                                .width *
-                                                                0.05,
-                                                          ),
-                                                          Column(
-                                                            crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
+                                                        ),
+                                                       ),
+                                                     SizedBox(
+                                                       width:12
+                                                     ),
+                                                     //paying buy wallet
+                                                      Container(
+                                                        padding: EdgeInsets
+                                                            .all(media
+                                                            .width *
+                                                            0.02),
+                                                        height:
+                                                        media.width *
+                                                            0.2,
+                                                        width: media.width *
+                                                            0.43,
+                                                        decoration: BoxDecoration(
+                                                            color: Colors.white.withOpacity(.1),
+                                                            borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                12)),
+
+                                                        child: Padding(
+                                                          padding: const EdgeInsets.all(8.0),
+                                                          child: Column(
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
                                                             children: [
-                                                              Text(
-                                                                etaDetails[choosenVehicle]['payment_type']
-                                                                    .toString()
-                                                                    .split(',')
-                                                                    .toList()[payingVia]
-                                                                    .toString(),
-                                                                style: GoogleFonts.montserrat(
-                                                                    color: textColor,
-                                                                    fontSize: media.width * fourteen,
-                                                                    fontWeight: FontWeight.w600),
+                                                              Text('Paying via',
+                                                                style:
+                                                              GoogleFonts
+                                                                  .montserrat(
+                                                                fontSize: media
+                                                                    .width *
+                                                                    twelve,
+                                                                color: const Color(
+                                                                    0xff666666),
                                                               ),
-                                                              (etaDetails[choosenVehicle]['has_discount'] ==
-                                                                  false)
-                                                                  ? Text(
-                                                                (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'cash')
-                                                                    ? languages[choosenLanguage]['text_paycash']
-                                                                    : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'wallet')
-                                                                    ? languages[choosenLanguage]['text_paywallet']
-                                                                    : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'card')
-                                                                    ? languages[choosenLanguage]['text_paycard']
-                                                                    : (etaDetails[choosenVehicle]['payment_type'].toString().split(',').toList()[payingVia] == 'upi')
-                                                                    ? languages[choosenLanguage]['text_payupi']
-                                                                    : '',
-                                                                style: GoogleFonts.montserrat(
-                                                                  color: textColor,
-                                                                  fontSize: media.width * ten,
+                                                              ),
+                                                              Padding(
+                                                                padding: const EdgeInsets.only(top:6.0),
+                                                                child: Row(
+
+                                                                  children: [
+                                                                    SizedBox(
+                                                                      width: media
+                                                                          .width *
+                                                                          0.06,
+                                                                      child: Image
+                                                                          .asset(
+                                                                        'assets/images/walletoption.png',
+                                                                        fit: BoxFit.contain,
+                                                                      )
+                                                                    ),
+                                                                    SizedBox(width:16),
+                                                                    Text('wallet',
+                                                                      style: GoogleFonts.montserrat(
+                                                                          color: textColor,
+                                                                          fontSize: media.width * fourteen,
+                                                                          fontWeight: FontWeight.w600),
+                                                                    ),
+                                                                  ],
                                                                 ),
-                                                              )
-                                                                  : Text(
-                                                                languages[choosenLanguage]['text_promoaccepted'],
-                                                                style: GoogleFonts.montserrat(
-                                                                  color: const Color(0xff319900),
-                                                                  fontSize: media.width * ten,
-                                                                ),
-                                                              )
+                                                              ),
                                                             ],
                                                           ),
-                                                          Expanded(
-                                                              child:
-                                                              Row(
-                                                                mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .end,
-                                                                children: [
-                                                                  Icon(
-                                                                    Icons
-                                                                        .arrow_forward_ios,
-                                                                    color:
-                                                                    textColor,
-                                                                  ),
-                                                                ],
-                                                              ))
-                                                        ],
-                                                      )
+                                                        ),
+                                                      ),
+                                                      //wallet
                                                     ],
-                                                  ),
-                                                ),
-                                              )
-                                                  : (choosenVehicle !=
+                                                  ) else (choosenVehicle !=
                                                   null &&
                                                   widget.type == 1)
                                                   ? InkWell(
@@ -2427,77 +2677,79 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                       [
                                                       'text_ridelater'])
                                                       : Container(),
-                                                  Button(
-                                                      width: (userDetails[
-                                                      'show_ride_later_feature'] ==
-                                                          true)
-                                                          ? media.width *
-                                                          0.42
-                                                          : media.width *
-                                                          0.9,
-                                                      color: buttonColor,
-                                                      onTap: () async {
-                                                        setState(() {
-                                                          _isLoading = true;
-                                                        });
-                                                        dynamic result;
-                                                        if (choosenVehicle !=
-                                                            null) {
-                                                          if (widget.type !=
-                                                              1) {
-                                                            if (etaDetails[
-                                                            choosenVehicle]
-                                                            [
-                                                            'has_discount'] ==
-                                                                false) {
-                                                              result =
-                                                              await createRequest();
-                                                              if (result ==
-                                                                  'logout') {
-                                                                navigateLogout();
-                                                              }
-                                                            } else {
-                                                              result =
-                                                              await createRequestWithPromo();
-                                                              if (result ==
-                                                                  'logout') {
-                                                                navigateLogout();
-                                                              }
-                                                            }
-                                                          } else {
-                                                            if (rentalOption[
-                                                            choosenVehicle]
-                                                            [
-                                                            'has_discount'] ==
-                                                                false) {
-                                                              result =
-                                                              await createRentalRequest();
-                                                              if (result ==
-                                                                  'logout') {
-                                                                navigateLogout();
-                                                              }
-                                                            } else {
-                                                              result =
-                                                              await createRentalRequestWithPromo();
-                                                              if (result ==
-                                                                  'logout') {
-                                                                navigateLogout();
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                        if (result ==
-                                                            'success') {
-                                                          timer();
-                                                        }
-                                                        setState(() {
-                                                          _isLoading =
-                                                          false;
-                                                        });
-                                                      },
-                                                      text: languages[
-                                                      choosenLanguage]
-                                                      ['text_ridenow']),
+
+                                                 // Ride Now Button
+                                                  // Button(
+                                                  //     width: (userDetails[
+                                                  //     'show_ride_later_feature'] ==
+                                                  //         true)
+                                                  //         ? media.width *
+                                                  //         0.42
+                                                  //         : media.width *
+                                                  //         0.9,
+                                                  //     color: buttonColor,
+                                                  //     onTap: () async {
+                                                  //       setState(() {
+                                                  //         _isLoading = true;
+                                                  //       });
+                                                  //       dynamic result;
+                                                  //       if (choosenVehicle !=
+                                                  //           null) {
+                                                  //         if (widget.type !=
+                                                  //             1) {
+                                                  //           if (etaDetails[
+                                                  //           choosenVehicle]
+                                                  //           [
+                                                  //           'has_discount'] ==
+                                                  //               false) {
+                                                  //             result =
+                                                  //             await createRequest();
+                                                  //             if (result ==
+                                                  //                 'logout') {
+                                                  //               navigateLogout();
+                                                  //             }
+                                                  //           } else {
+                                                  //             result =
+                                                  //             await createRequestWithPromo();
+                                                  //             if (result ==
+                                                  //                 'logout') {
+                                                  //               navigateLogout();
+                                                  //             }
+                                                  //           }
+                                                  //         } else {
+                                                  //           if (rentalOption[
+                                                  //           choosenVehicle]
+                                                  //           [
+                                                  //           'has_discount'] ==
+                                                  //               false) {
+                                                  //             result =
+                                                  //             await createRentalRequest();
+                                                  //             if (result ==
+                                                  //                 'logout') {
+                                                  //               navigateLogout();
+                                                  //             }
+                                                  //           } else {
+                                                  //             result =
+                                                  //             await createRentalRequestWithPromo();
+                                                  //             if (result ==
+                                                  //                 'logout') {
+                                                  //               navigateLogout();
+                                                  //             }
+                                                  //           }
+                                                  //         }
+                                                  //       }
+                                                  //       if (result ==
+                                                  //           'success') {
+                                                  //         timer();
+                                                  //       }
+                                                  //       setState(() {
+                                                  //         _isLoading =
+                                                  //         false;
+                                                  //       });
+                                                  //     },
+                                                  //     text: languages[
+                                                  //     choosenLanguage]
+                                                  //     ['text_ridenow']),
                                                 ],
                                               ),
                                             ],
@@ -3151,7 +3403,6 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                             : Colors.transparent
                                             .withOpacity(0.6),
                                         child: Scaffold(
-
                                           backgroundColor:
                                           Colors.transparent,
                                           body: SingleChildScrollView(
@@ -3692,7 +3943,6 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                               ),
                                             ),
                                           ),
-
                                         ),
                                       ))
                                       : Container(),
@@ -3895,60 +4145,47 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                           SizedBox(
                                             height: media.width * 0.4,
                                             child: Image.asset(
-                                              'assets/images/waiting_time.gif',
+                                              'assets/images/loader-black.gif',
                                               fit: BoxFit.contain,
                                             ),
                                           ),
                                           SizedBox(
                                             height: media.height * 0.02,
                                           ),
-                                          Container(
-                                            height: media.width * 0.02,
-                                            width: media.width * 0.9,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                BorderRadius.circular(
-                                                    media.width *
-                                                        0.01),
-                                                color: Colors.grey),
-                                            alignment:
-                                            Alignment.centerLeft,
-                                            child: Container(
-                                              height: media.width * 0.02,
-                                              width: (media.width *
-                                                  0.9 *
-                                                  (timing /
-                                                      userDetails[
-                                                      'maximum_time_for_find_drivers_for_regular_ride'])),
-                                              decoration: BoxDecoration(
-                                                  borderRadius:
-                                                  BorderRadius
-                                                      .circular(media
-                                                      .width *
-                                                      0.01),
-                                                  color: buttonColor),
-                                            ),
-                                          ),
+                                          // Container(
+                                          //   height: media.width * 0.02,
+                                          //   width: media.width * 0.9,
+                                          //   decoration: BoxDecoration(
+                                          //       borderRadius:
+                                          //       BorderRadius.circular(
+                                          //           media.width *
+                                          //               0.01),
+                                          //       color: Colors.grey),
+                                          //   alignment:
+                                          //   Alignment.centerLeft,
+                                          //   child: Container(
+                                          //     height: media.width * 0.02,
+                                          //     width: (media.width *
+                                          //         0.9 *
+                                          //         (timing /
+                                          //             userDetails[
+                                          //             'maximum_time_for_find_drivers_for_regular_ride'])),
+                                          //     decoration: BoxDecoration(
+                                          //         borderRadius:
+                                          //         BorderRadius
+                                          //             .circular(media
+                                          //             .width *
+                                          //             0.01),
+                                          //         color: buttonColor),
+                                          //   ),
+                                          // ),
                                           SizedBox(
                                             height: media.height * 0.02,
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                            children: [
-                                              (timing != null)
-                                                  ? Text(
-                                                '${Duration(seconds: timing).toString().substring(3, 7)} mins',
-                                                style: GoogleFonts.montserrat(
-                                                    fontSize: media
-                                                        .width *
-                                                        ten,
-                                                    color: textColor
-                                                        .withOpacity(
-                                                        0.4)),
-                                              )
-                                                  : Container()
-                                            ],
+                                          LinearProgressIndicator(
+                                            backgroundColor: Colors.white24,
+                                            valueColor: AlwaysStoppedAnimation<Color>(Colors.white,),
+                                            value: 0.8,
                                           ),
                                           SizedBox(
                                             height: media.height * 0.02,
@@ -6165,7 +6402,6 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                         key: iconDistanceKey,
                                         child: Stack(
                                           children: [
-
                                             Icon(Icons.chat_bubble,
                                                 size: media.width * 0.2,
                                                 color: page,
@@ -6211,210 +6447,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                           ],
                                         )),
                                   )
-                                      : Container(),
-
-                                  // Bottom sheet
-                                  DraggableScrollableSheet(
-                                      initialChildSize: 0.5,
-                                      minChildSize: 0.5,
-                                      builder: (BuildContext context,ScrollController scrollcontainer){
-                                        return Container(
-                                          decoration: BoxDecoration(
-                                              color: Colors.black,
-                                              borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(24.0),
-                                                topRight: Radius.circular(24.0),
-                                              )
-                                          ),
-                                          child: ListView.builder(
-                                              controller: scrollcontainer,
-                                              physics: ClampingScrollPhysics(),
-                                              itemCount: cars.length,
-                                              itemBuilder: (BuildContext context,int index){
-                                                final car =cars[index];
-
-                                                if(index==0){
-                                                  return Padding(
-                                                    padding: EdgeInsets. all (8.0),
-                                                    child: Column (
-                                                        children: [
-                                                          Container(
-                                                            width:50,
-                                                            height: 4,
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.white,
-                                                              borderRadius: BorderRadius.circular((64)),),
-
-                                                          ),
-
-                                                          SizedBox(
-                                                            height: 8,
-                                                          ),
-
-                                                          Text('Select Your Captain',style: TextStyle(
-                                                            color: Colors.white,
-                                                            fontSize: 24,
-                                                            fontWeight: FontWeight.bold,
-
-                                                          ),),
-
-                                                          Padding(
-                                                            padding: const EdgeInsets.only(top:8),
-                                                            child: Row(
-                                                              mainAxisAlignment: MainAxisAlignment.center,
-
-                                                              children: [
-                                                                //search bar
-                                                                SizedBox(
-                                                                  width:296,
-                                                                  height: 56,
-                                                                  child: TextField(
-                                                                    decoration: InputDecoration(
-                                                                      prefixIcon: Icon(Icons.search),
-                                                                      fillColor: Colors.black.withOpacity(.8),
-                                                                      border: OutlineInputBorder(
-                                                                        borderRadius: BorderRadius.circular(24),
-                                                                      ),
-                                                                      // labelText: 'Filled',
-                                                                      hintText: 'Search By Name, Car Number, driver id..',
-                                                                      hintStyle: TextStyle(
-                                                                          color: Colors.white24
-                                                                      ),
-                                                                      filled: true,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                SizedBox(width:8),
-
-                                                                Container(
-                                                                  height: 40,
-                                                                  width: 40,
-                                                                  decoration: BoxDecoration(
-                                                                      shape: BoxShape.circle,
-                                                                      color:Colors.white.withOpacity(.1)
-                                                                  ),
-                                                                  child:Icon(Icons.downloading_sharp,
-                                                                    color: Colors.white60,),
-                                                                ),
-                                                                SizedBox(width:8),
-
-                                                                //Referral Icon
-                                                                Container(
-                                                                  height: 40,
-                                                                  width: 40,
-                                                                  decoration: BoxDecoration(
-                                                                    shape: BoxShape.circle,
-                                                                    color:Colors.white.withOpacity(.1),
-                                                                  ),
-                                                                  child:Icon(Icons.receipt_long_rounded,
-                                                                      color: Colors.white60),
-                                                                ),
-                                                              ],),
-                                                          ),
-                                                        ]
-                                                    ),);
-                                                }
-
-                                                return Padding(
-                                                  padding: const EdgeInsets.only(left: 8.0,right: 8,top:16),
-
-                                                  //Captain Detail card
-                                                  child: Container(
-
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.white12,
-                                                      borderRadius: BorderRadius.circular(16),
-                                                    ),
-                                                    child: Padding(
-                                                      padding: const EdgeInsets.all(16.0),
-                                                      child: Column(
-                                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                                        children: [
-
-                                                          Row(
-                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                            children: [
-                                                              Text(car['name'],style: TextStyle(color: Colors.white60,fontSize: 24,fontWeight: FontWeight.bold),),
-                                                              Text('12KM',style: TextStyle(color: Colors.white60),),
-                                                            ],
-                                                          ),
-                                                          Row(
-                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                            children: [
-                                                              Text('Car Model',style: TextStyle(color: Colors.white60,fontSize: 16),),
-                                                              Text('12Min',style: TextStyle(color: Colors.white60),),
-                                                            ],
-                                                          ),
-
-                                                          SizedBox(
-                                                            height: 8,
-                                                          ),
-
-                                                          Icon(Icons.star,color: Colors.white60),
-
-                                                          SizedBox(
-                                                            height: 16,
-                                                          ),
-
-                                                          Row(
-                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                            children: [
-
-                                                              //Primary Button
-                                                              SizedBox(
-                                                                height:56,
-                                                                width: 160,
-                                                                child: ElevatedButton(
-                                                                  child: Text('Book Ride',style: TextStyle(
-                                                                    color: Colors.white,
-
-                                                                  ),),
-                                                                  onPressed: () {},
-
-                                                                  style: ElevatedButton.styleFrom(
-                                                                      backgroundColor: Colors.black,
-                                                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
-                                                                      textStyle: TextStyle(
-                                                                        fontSize: 15,
-                                                                        fontWeight: FontWeight.bold,
-                                                                        color: Colors.white,
-                                                                      )),
-                                                                ),
-                                                              ),
-
-                                                              //Secondary Button
-                                                              SizedBox(
-                                                                height:56,
-                                                                child: OutlinedButton(
-                                                                  child: Text('View Details',style: TextStyle(
-                                                                      color: Colors.white
-                                                                  ),),
-                                                                  onPressed: () {},
-
-                                                                  style: ElevatedButton.styleFrom(
-                                                                    // backgroundColor: Colors.white.withOpacity(.1),
-                                                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24),),
-                                                                      textStyle: TextStyle(
-                                                                        fontSize: 15,
-                                                                        fontWeight: FontWeight.bold,
-                                                                        // color: Colors.white,
-                                                                      )),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-
-
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                          ),
-                                        );
-                                      }),
-
+                                      : Container()
                                 ],
                               );
                             });
@@ -6522,4 +6555,3 @@ class _BookingConfirmationState extends State<BookingConfirmation>
     animationController.forward();
   }
 }
-

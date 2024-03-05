@@ -389,7 +389,7 @@ class _MapsState extends State<Maps>
                                             Text(
                                               languages['en']
                                                   ['text_enable_location'],
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor,
@@ -407,7 +407,7 @@ class _MapsState extends State<Maps>
                                                 child: Text(
                                                   languages['en']
                                                       ['text_ok'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       fontSize:
@@ -428,11 +428,7 @@ class _MapsState extends State<Maps>
                                           width: media.width * 1,
                                           alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [Colors.black,Colors.black87,Colors.black87, Colors.black,],
-                                  ),
+                                 color: Colors.black,
                                 ),
                                           child: Column(
                                             mainAxisAlignment:
@@ -452,7 +448,7 @@ class _MapsState extends State<Maps>
                                                 languages['en']
                                                     ['text_trustedtaxi'],
                                                 textAlign: TextAlign.center,
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                     color: textColor,
                                                     fontSize:
                                                         media.width * eighteen,
@@ -466,7 +462,7 @@ class _MapsState extends State<Maps>
                                                 languages['en']
                                                     ['text_allowpermission1'],
                                                 textAlign: TextAlign.center,
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                   color: textColor,
                                                   fontSize:
                                                       media.width * fourteen,
@@ -476,7 +472,7 @@ class _MapsState extends State<Maps>
                                                 languages['en']
                                                     ['text_allowpermission2'],
                                                 textAlign: TextAlign.center,
-                                                style: GoogleFonts.roboto(
+                                                style: GoogleFonts.montserrat(
                                                   color: textColor,
                                                   fontSize:
                                                       media.width * fourteen,
@@ -514,7 +510,7 @@ class _MapsState extends State<Maps>
                                                             'text_loc_permission_user'],
                                                         textAlign: TextAlign.center,
                                                         style:
-                                                            GoogleFonts.roboto(
+                                                            GoogleFonts.montserrat(
                                                                 color:
                                                                     textColor,
                                                                 fontSize: media
@@ -860,57 +856,58 @@ class _MapsState extends State<Maps>
                                                               )
                                                             : Image.asset(
                                                                 'assets/images/dropmarker.png'))),
+                                                //customer support
+                                                // Positioned(
+                                                //   right: 10,
+                                                //   top: 150,
+                                                //   child: InkWell(
+                                                //     onTap: () async {
+                                                //       if (contactus == false) {
+                                                //         setState(() {
+                                                //           contactus = true;
+                                                //         });
+                                                //       } else {
+                                                //         setState(() {
+                                                //           contactus = false;
+                                                //         });
+                                                //       }
+                                                //     },
 
-                                                Positioned(
-                                                  right: 10,
-                                                  top: 150,
-                                                  child: InkWell(
-                                                    onTap: () async {
-                                                      if (contactus == false) {
-                                                        setState(() {
-                                                          contactus = true;
-                                                        });
-                                                      } else {
-                                                        setState(() {
-                                                          contactus = false;
-                                                        });
-                                                      }
-                                                    },
-                                                    child: Container(
-                                                      height: media.width * 0.1,
-                                                      width: media.width * 0.1,
-                                                      decoration: BoxDecoration(
-                                                          boxShadow: [
-                                                            BoxShadow(
-                                                                blurRadius: 2,
-                                                                color: textColor
-                                                                    .withOpacity(
-                                                                        0.2),
-                                                                spreadRadius: 2)
-                                                          ],
-                                                          color: page,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(media
-                                                                          .width *
-                                                                      0.02)),
-                                                      alignment:
-                                                          Alignment.center,
-                                                      child: Image.asset(
-                                                          'assets/images/customercare.png',
-                                                          fit: BoxFit.contain,
-                                                          width: media.width *
-                                                              0.06,
-                                                          color: textColor),
+                                                    // child: Container(
+                                                    //   height: media.width * 0.1,
+                                                    //   width: media.width * 0.1,
+                                                    //   decoration: BoxDecoration(
+                                                    //       boxShadow: [
+                                                    //         BoxShadow(
+                                                    //             blurRadius: 2,
+                                                    //             color: textColor
+                                                    //                 .withOpacity(
+                                                    //                     0.2),
+                                                    //             spreadRadius: 2)
+                                                    //       ],
+                                                    //       color: page,
+                                                    //       borderRadius:
+                                                    //           BorderRadius
+                                                    //               .circular(media
+                                                    //                       .width *
+                                                    //                   0.02)),
+                                                    //   alignment:
+                                                    //       Alignment.center,
+                                                    //   // child: Image.asset(
+                                                      //     'assets/images/customercare.png',
+                                                      //     fit: BoxFit.contain,
+                                                      //     width: media.width *
+                                                      //         0.06,
+                                                      //     color: textColor),
                                                       // Icon(
                                                       //     Icons
                                                       //         .my_location_sharp,
                                                       //     size: media
                                                       //             .width *
                                                       //         0.06),
-                                                    ),
-                                                  ),
-                                                ),
+                                                //     ),
+                                                //   ),
+                                                // ),
                                                 (contactus == true)
                                                     ? Positioned(
                                                         right: 10,
@@ -970,7 +967,7 @@ class _MapsState extends State<Maps>
                                                                             child:
                                                                                 Text(
                                                                               userDetails['contact_us_mobile1'],
-                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
+                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor),
                                                                             ))
                                                                       ],
                                                                     ),
@@ -994,7 +991,7 @@ class _MapsState extends State<Maps>
                                                                             child:
                                                                                 Text(
                                                                               userDetails['contact_us_mobile2'],
-                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
+                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor),
                                                                             ))
                                                                       ],
                                                                     ),
@@ -1021,7 +1018,7 @@ class _MapsState extends State<Maps>
                                                                               maxLines: 1,
                                                                               // overflow:
                                                                               //     TextOverflow.ellipsis,
-                                                                              style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
+                                                                              style: GoogleFonts.montserrat(fontSize: media.width * fourteen, color: textColor),
                                                                             ))
                                                                       ],
                                                                     ),
@@ -1093,142 +1090,142 @@ class _MapsState extends State<Maps>
                                                           ),
                                                         ))
                                                     : Container(),
-                                                Positioned(
-                                                    top: (userDetails[
-                                                                    'show_ride_without_destination']
-                                                                .toString() ==
-                                                            '1')
-                                                        ? 20 + media.width * 0.4
-                                                        : 20 +
-                                                            media.width * 0.25,
-                                                    child: SizedBox(
-                                                      width: media.width * 0.9,
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          (userDetails[
-                                                                      'show_rental_ride'] ==
-                                                                  true)
-                                                              ? Button(
-                                                                  onTap: () {
-                                                                    if (addressList
-                                                                        .isNotEmpty) {
-                                                                      Navigator.push(
-                                                                          context,
-                                                                          MaterialPageRoute(
-                                                                              builder: (context) => BookingConfirmation(
-                                                                                    type: 1,
-                                                                                  )));
-                                                                    }
-                                                                  },
-                                                                  text: 'Pro Ride',
-                                                                )
-                                                              : Container(),
-                                                          InkWell(
-                                                            onTap: () async {
-                                                              if (locationAllowed ==
-                                                                  true) {
-                                                                if (currentLocation !=
-                                                                    null) {
-                                                                  _controller?.animateCamera(
-                                                                      CameraUpdate.newLatLngZoom(
-                                                                          currentLocation,
-                                                                          18.0));
-                                                                  center =
-                                                                      currentLocation;
-                                                                } else {
-                                                                  _controller?.animateCamera(
-                                                                      CameraUpdate.newLatLngZoom(
-                                                                          center,
-                                                                          18.0));
-                                                                }
-                                                              } else {
-                                                                if (serviceEnabled ==
-                                                                    true) {
-                                                                  setState(() {
-                                                                    _locationDenied =
-                                                                        true;
-                                                                  });
-                                                                } else {
-                                                                  await geolocs
-                                                                          .Geolocator
-                                                                      .getCurrentPosition(
-                                                                          desiredAccuracy: geolocs
-                                                                              .LocationAccuracy
-                                                                              .low);
-                                                                  // await location
-                                                                  //     .requestService();
-                                                                  if (await geolocs
-                                                                      .GeolocatorPlatform
-                                                                      .instance
-                                                                      .isLocationServiceEnabled()) {
-                                                                    setState(
-                                                                        () {
-                                                                      _locationDenied =
-                                                                          true;
-                                                                    });
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            child: Container(
-                                                              height:
-                                                                  media.width *
-                                                                      0.1,
-                                                              width:
-                                                                  media.width *
-                                                                      0.1,
-                                                              decoration: BoxDecoration(
-                                                                  boxShadow: [
-                                                                    BoxShadow(
-                                                                        blurRadius:
-                                                                            2,
-                                                                        color: textColor.withOpacity(
-                                                                            0.2),
-                                                                        spreadRadius:
-                                                                            2)
-                                                                  ],
-                                                                  color: page,
-                                                                  borderRadius:
-                                                                      BorderRadius.circular(
-                                                                          media.width *
-                                                                              0.02)),
-                                                              child: Icon(
-                                                                  Icons
-                                                                      .my_location_sharp,
-                                                                  color:
-                                                                      textColor),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    )),
-                                             /*   Positioned(
-                                                    bottom: 0,
-                                                    child: Container(
-                                                      width: media.width * 1,
-                                                      decoration: BoxDecoration(
-                                                        color: (_bottom == 0)
-                                                            ? null
-                                                            : page,
-                                                      ),
-                                                      padding: EdgeInsets.only(
-                                                          top: MediaQuery.of(
-                                                              context)
-                                                              .padding
-                                                              .top +
-                                                              12.5),
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .end,
-                                                        children: [
-
-                                                        ],
-                                                      ),
-                                                    )),*/
+                                             //    Positioned(
+                                             //        top: (userDetails[
+                                             //                        'show_ride_without_destination']
+                                             //                    .toString() ==
+                                             //                '1')
+                                             //            ? 20 + media.width * 0.4
+                                             //            : 20 +
+                                             //                media.width * 0.25,
+                                             //        child: SizedBox(
+                                             //          width: media.width * 0.9,
+                                             //          child: Row(
+                                             //            mainAxisAlignment:
+                                             //                MainAxisAlignment
+                                             //                    .spaceBetween,
+                                             //            children: [
+                                             //              (userDetails[
+                                             //                          'show_rental_ride'] ==
+                                             //                      true)
+                                             //                  ? Button(
+                                             //                      onTap: () {
+                                             //                        if (addressList
+                                             //                            .isNotEmpty) {
+                                             //                          Navigator.push(
+                                             //                              context,
+                                             //                              MaterialPageRoute(
+                                             //                                  builder: (context) => BookingConfirmation(
+                                             //                                        type: 1,
+                                             //                                      )));
+                                             //                        }
+                                             //                      },
+                                             //                      text: 'Pro Ride',
+                                             //                    )
+                                             //                  : Container(),
+                                             //              InkWell(
+                                             //                onTap: () async {
+                                             //                  if (locationAllowed ==
+                                             //                      true) {
+                                             //                    if (currentLocation !=
+                                             //                        null) {
+                                             //                      _controller?.animateCamera(
+                                             //                          CameraUpdate.newLatLngZoom(
+                                             //                              currentLocation,
+                                             //                              18.0));
+                                             //                      center =
+                                             //                          currentLocation;
+                                             //                    } else {
+                                             //                      _controller?.animateCamera(
+                                             //                          CameraUpdate.newLatLngZoom(
+                                             //                              center,
+                                             //                              18.0));
+                                             //                    }
+                                             //                  } else {
+                                             //                    if (serviceEnabled ==
+                                             //                        true) {
+                                             //                      setState(() {
+                                             //                        _locationDenied =
+                                             //                            true;
+                                             //                      });
+                                             //                    } else {
+                                             //                      await geolocs
+                                             //                              .Geolocator
+                                             //                          .getCurrentPosition(
+                                             //                              desiredAccuracy: geolocs
+                                             //                                  .LocationAccuracy
+                                             //                                  .low);
+                                             //                      // await location
+                                             //                      //     .requestService();
+                                             //                      if (await geolocs
+                                             //                          .GeolocatorPlatform
+                                             //                          .instance
+                                             //                          .isLocationServiceEnabled()) {
+                                             //                        setState(
+                                             //                            () {
+                                             //                          _locationDenied =
+                                             //                              true;
+                                             //                        });
+                                             //                      }
+                                             //                    }
+                                             //                  }
+                                             //                },
+                                             //                child: Container(
+                                             //                  height:
+                                             //                      media.width *
+                                             //                          0.1,
+                                             //                  width:
+                                             //                      media.width *
+                                             //                          0.1,
+                                             //                  decoration: BoxDecoration(
+                                             //                      boxShadow: [
+                                             //                        BoxShadow(
+                                             //                            blurRadius:
+                                             //                                2,
+                                             //                            color: textColor.withOpacity(
+                                             //                                0.2),
+                                             //                            spreadRadius:
+                                             //                                2)
+                                             //                      ],
+                                             //                      color: page,
+                                             //                      borderRadius:
+                                             //                          BorderRadius.circular(
+                                             //                              media.width *
+                                             //                                  0.02)),
+                                             //                  child: Icon(
+                                             //                      Icons
+                                             //                          .my_location_sharp,
+                                             //                      color:
+                                             //                          textColor),
+                                             //                ),
+                                             //              ),
+                                             //            ],
+                                             //          ),
+                                             //        )),
+                                             // /*   Positioned(
+                                             //        bottom: 0,
+                                             //        child: Container(
+                                             //          width: media.width * 1,
+                                             //          decoration: BoxDecoration(
+                                             //            color: (_bottom == 0)
+                                             //                ? null
+                                             //                : page,
+                                             //          ),
+                                             //          padding: EdgeInsets.only(
+                                             //              top: MediaQuery.of(
+                                             //                  context)
+                                             //                  .padding
+                                             //                  .top +
+                                             //                  12.5),
+                                             //          child: Row(
+                                             //            mainAxisAlignment:
+                                             //            MainAxisAlignment
+                                             //                .end,
+                                             //            children: [
+                                             //
+                                             //            ],
+                                             //          ),
+                                             //        )),*/
                                                 Positioned(
                                                     bottom: 0,
                                                     child: GestureDetector(
@@ -1251,11 +1248,7 @@ class _MapsState extends State<Maps>
                                                       },
                                                       child: Container(
                                                         decoration: BoxDecoration(
-                                                            gradient: LinearGradient(
-                                                              begin: Alignment.topCenter,
-                                                              end: Alignment.bottomCenter,
-                                                              colors: [Colors.black,Colors.black87,Colors.black87, Colors.black,],
-                                                            ),
+                                                            color:Colors.black,
                                                             border: Border.all(
                                                               color: Colors.black12,
                                                             ),
@@ -1316,24 +1309,35 @@ class _MapsState extends State<Maps>
                                                                   media.width *
                                                                       0.03,
                                                             ),
-                                                            Container(
-                                                              alignment: Alignment.centerLeft,
-                                                              child: Text("Select The Pickup Point:",
-                                                                textAlign:TextAlign.left,
-                                                                style: GoogleFonts.montserrat(
-                                                                  fontSize: 20,
-                                                                  color: Colors.white,
+                                                            Row(
+                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                              children: [
+                                                                Container(
+                                                                  alignment: Alignment.centerLeft,
+                                                                  child: Text("Select The Pickup Point:",
+                                                                    textAlign:TextAlign.left,
+                                                                    style: GoogleFonts.montserrat(
+                                                                      fontSize: 18,
+                                                                      color: Colors.white,
+                                                                      fontWeight: FontWeight.bold,
+                                                                      fontStyle: FontStyle.normal,
+
+
+
+                                                                    ),  ),
+                                                                ),
+                                                                Text('Add Stop +',
+                                                                  style: GoogleFonts.montserrat(
+                                                                  fontSize: 16,
+                                                                  color: Colors.white.withOpacity(.6),
                                                                   fontWeight: FontWeight.w700,
-                                                                  fontStyle: FontStyle.normal,
-
-
-
-                                                                ),  ),
+                                                                  fontStyle: FontStyle.normal,),),
+                                                              ],
                                                             ),
                                                             SizedBox(
                                                               height:
                                                               media.width *
-                                                                  0.05,
+                                                                  0.03,
                                                             ),
                                                             InkWell(
                                                               onTap: () {
@@ -1410,6 +1414,7 @@ class _MapsState extends State<Maps>
                                                                       ),
                                                                     ),
                                                                     SizedBox(
+
                                                                         width:
                                                                         media.width * 0.02),
                                                                     (_pickaddress ==
@@ -1425,7 +1430,7 @@ class _MapsState extends State<Maps>
                                                                             hintStyle: GoogleFonts.montserrat(fontSize: media.width * twelve, color: (isDarkTheme == true) ? textColor.withOpacity(0.4) : hintColor),
                                                                             border: InputBorder.none,
                                                                           ),
-                                                                          style: GoogleFonts.roboto(color: textColor),
+                                                                          style: GoogleFonts.montserrat(color: textColor),
                                                                           maxLines: 1,
                                                                           onChanged: (val) {
                                                                             _debouncer.run(() {
@@ -1505,9 +1510,9 @@ class _MapsState extends State<Maps>
                                                             child:  Text("Select The Drop Point:",
                                                               textAlign:TextAlign.left,
                                                               style: GoogleFonts.montserrat(
-                                                                fontSize: 20,
+                                                                fontSize: 18,
                                                                 color: Colors.white,
-                                                                fontWeight: FontWeight.w700,
+                                                                fontWeight: FontWeight.bold,
                                                                 fontStyle: FontStyle.normal,
 
 
@@ -1517,7 +1522,7 @@ class _MapsState extends State<Maps>
                                                             SizedBox(
                                                               height:
                                                               media.width *
-                                                                  0.05,
+                                                                  0.03,
                                                             ),
                                                             InkWell(
                                                               onTap: () {
@@ -1849,7 +1854,7 @@ class _MapsState extends State<Maps>
                                                                                                                 width: media.width * 0.8,
                                                                                                                 child: Text(
                                                                                                                   favAddress[i]['pick_address'],
-                                                                                                                  style: GoogleFonts.roboto(
+                                                                                                                  style: GoogleFonts.montserrat(
                                                                                                                     fontSize: media.width * twelve,
                                                                                                                     color: textColor,
                                                                                                                   ),
@@ -1998,7 +2003,7 @@ class _MapsState extends State<Maps>
                                           Text(
                                             languages['en']
                                                 ['text_saveaddressas'],
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize: media.width * sixteen,
                                                 color: textColor,
                                                 fontWeight: FontWeight.w600),
@@ -2008,7 +2013,7 @@ class _MapsState extends State<Maps>
                                           ),
                                           Text(
                                             favSelectedAddress,
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize: media.width * twelve,
                                                 color: textColor),
                                           ),
@@ -2237,7 +2242,7 @@ class _MapsState extends State<Maps>
                                                                         .withOpacity(
                                                                             0.4)
                                                                     : hintColor)),
-                                                    style: GoogleFonts.roboto(
+                                                    style: GoogleFonts.montserrat(
                                                         color: textColor),
                                                     maxLines: 1,
                                                     onChanged: (val) {
@@ -2339,7 +2344,7 @@ class _MapsState extends State<Maps>
                                           Text(
                                             languages['en']
                                                 ['text_drivercancelled'],
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize:
                                                     media.width * fourteen,
                                                 fontWeight: FontWeight.w600,
@@ -2390,7 +2395,7 @@ class _MapsState extends State<Maps>
                                           Text(
                                             languages['en']
                                                 ['text_cancelsuccess'],
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize:
                                                     media.width * fourteen,
                                                 fontWeight: FontWeight.w600,
@@ -2469,7 +2474,7 @@ class _MapsState extends State<Maps>
                                             languages['en']
                                                 ['text_delete_confirm'],
                                             textAlign: TextAlign.center,
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize: media.width * sixteen,
                                                 color: textColor,
                                                 fontWeight: FontWeight.w600),
@@ -2569,7 +2574,7 @@ class _MapsState extends State<Maps>
                                             languages['en']
                                                 ['text_confirmlogout'],
                                             textAlign: TextAlign.center,
-                                            style: GoogleFonts.roboto(
+                                            style: GoogleFonts.montserrat(
                                                 fontSize: media.width * sixteen,
                                                 color: textColor,
                                                 fontWeight: FontWeight.w600),
@@ -2668,7 +2673,7 @@ class _MapsState extends State<Maps>
                                             child: Text(
                                               languages['en']
                                                   ['text_open_loc_settings'],
-                                              style: GoogleFonts.roboto(
+                                              style: GoogleFonts.montserrat(
                                                   fontSize:
                                                       media.width * sixteen,
                                                   color: textColor,
@@ -2686,7 +2691,7 @@ class _MapsState extends State<Maps>
                                                 child: Text(
                                                   languages['en']
                                                       ['text_open_settings'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize:
                                                           media.width * sixteen,
                                                       color: buttonColor,
@@ -2705,7 +2710,7 @@ class _MapsState extends State<Maps>
                                                 child: Text(
                                                   languages['en']
                                                       ['text_done'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize:
                                                           media.width * sixteen,
                                                       color: buttonColor,
@@ -2748,7 +2753,7 @@ class _MapsState extends State<Maps>
                                                 child: Text(
                                                   languages['en']
                                                       ['text_update_available'],
-                                                  style: GoogleFonts.roboto(
+                                                  style: GoogleFonts.montserrat(
                                                       fontSize:
                                                           media.width * sixteen,
                                                       fontWeight:
