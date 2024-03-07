@@ -1601,7 +1601,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                           ),
 
                                                                                   SizedBox(
-                                                                                    width: 96,
+                                                                                    width: MediaQuery.of(context).size.width*.2,
                                                                                   ),
 
                                                                                   // Price
@@ -1814,7 +1814,7 @@ class _BookingConfirmationState extends State<BookingConfirmation>
                                                                                         )),
                                                                                   ],
                                                                                 ),
-                                                                                SizedBox(width:196),
+                                                                                SizedBox(width: MediaQuery.of(context).size.width*.46,),
                                                                                 //Price of pro rider
                                                                                 Column(
                                                                                   crossAxisAlignment: CrossAxisAlignment.end,
